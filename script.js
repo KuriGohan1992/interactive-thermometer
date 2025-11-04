@@ -154,6 +154,10 @@ function show_conversions(temperature) {
         show_description('Sweltering', 'descriptive_images/sweltering.jpg');
     } else if (celsius < 59) {
         show_description('Scorching', 'descriptive_images/scorching.jpg');
+    } else if (celsius < 80) {
+        show_description('Searing', 'descriptive_images/searing.jpg');
+    } else if (celsius < 110) {
+        show_description('Flaming', 'descriptive_images/flaming.jpg');
     } else if (celsius < 700) {
         show_description('Blazing', 'descriptive_images/blazing.jpg');
     } else if (celsius < 6000) {
