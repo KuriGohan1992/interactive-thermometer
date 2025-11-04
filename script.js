@@ -105,7 +105,6 @@ function show_conversions(temperature) {
     } else if (celsius < 16000000) {
         show_fun_fact("The temperature of our Sun's core is estimated to be around 15,000,000˚C.");
     } else {
-        //fact about big bang
         show_fun_fact('The temperature of the universe 1 second after the Big Bang is around 10 raise to 32 Kelvin.');
     }
 
@@ -163,7 +162,43 @@ function show_conversions(temperature) {
         show_description('Cosmically Hot', 'descriptive_images/cosmically_hot.jpg');
     } else {
         show_description('Big Bang', 'descriptive_images/big_bang.jpg');
-    } 
+    }
+
+    const circle = document.getElementById('circle');
+
+    if (celsius < -273.15) {
+        mercury.style.fill = circle.style.fill = '#256fff';
+    } else if (celsius < -180) {
+        mercury.style.fill = circle.style.fill = '#257fff';
+    } else if (celsius < -100) {
+        mercury.style.fill = circle.style.fill = '#258fff';
+    } else if (celsius < -15) {
+        mercury.style.fill = circle.style.fill = '#259fff';
+    } else if (celsius < 4) {
+        mercury.style.fill = circle.style.fill = '#25afff';
+    } else if (celsius < 10) {
+        mercury.style.fill = circle.style.fill = '#f2b3b9';
+    } else if (celsius < 15) {
+        mercury.style.fill = circle.style.fill = '#ed99a2';
+    } else if (celsius < 23) {
+        mercury.style.fill = circle.style.fill = '#e9808b';
+    } else if (celsius < 35) {
+        mercury.style.fill = circle.style.fill = '#e46774';
+    } else if (celsius < 50) {
+        mercury.style.fill = circle.style.fill = '#e04d5d';
+    } else if (celsius < 80) {
+        mercury.style.fill = circle.style.fill = '#db3445';
+    } else if (celsius < 120) {
+        mercury.style.fill = circle.style.fill = '#d71a2e';
+    } else if (celsius < 1000) {
+        mercury.style.fill = circle.style.fill = '#a41726';
+    } else if (celsius < 5000) {
+        mercury.style.fill = circle.style.fill = '#900a22';
+    } else if (celsius < 16000000){
+        mercury.style.fill = circle.style.fill = '#810020';
+    } else {
+        mercury.style.fill = circle.style.fill = '#000000';
+    }    
     
 }
 
