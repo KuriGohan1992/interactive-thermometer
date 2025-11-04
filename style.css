@@ -11,6 +11,11 @@
     object-fit: cover;
 }
 
+#fun_fact {
+    width: 400px;
+    flex-wrap: wrap;
+}
+
 .thermometer-container {
     height: 500px;
     width: 500px;
