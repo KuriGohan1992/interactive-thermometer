@@ -124,45 +124,45 @@ function show_conversions(temperature) {
     // }
 
     if (celsius < -273.15) {
-        show_description('Below Absolute Zero', 'below_absolute_zero.jpg');
+        show_description('Below Absolute Zero', 'descriptive_images/below_absolute_zero.jpg');
     } else if (celsius === -273.15) {
-        show_description('Absolute Zero', 'absolute_zero.jpg');
+        show_description('Absolute Zero', 'descriptive_images/absolute_zero.jpg');
     } else if (celsius < -89) {
-        show_description('Outerworldly Cold', 'outerworldly_cold.jpg');
+        show_description('Outerworldly Cold', 'descriptive_images/outerworldly_cold.jpg');
     } else if (celsius < -40) {
-        show_description('Arctic', 'arctic.jpg');
+        show_description('Arctic', 'descriptive_images/arctic.jpg');
     } else if (celsius < -20) {
-        show_description('Frigid', 'frigid.jpg');
+        show_description('Frigid', 'descriptive_images/frigid.jpg');
     } else if (celsius < -10) {
-        show_description('Freezing', 'freezing.jpg');
+        show_description('Freezing', 'descriptive_images/freezing.jpg');
     } else if (celsius < 0) {
-        show_description('Cold', 'cold.jpg');
+        show_description('Cold', 'descriptive_images/cold.jpg');
     } else if (celsius < 5) {
-        show_description('Chilly', 'chilly.jpg');
+        show_description('Chilly', 'descriptive_images/chilly.jpg');
     } else if (celsius < 9) {
-        show_description('Brisk', 'brisk.jpg');
+        show_description('Brisk', 'descriptive_images/brisk.jpg');
     } else if (celsius < 15) {
-        show_description('Cool', 'cool.jpg');
+        show_description('Cool', 'descriptive_images/cool.jpg');
     } else if (celsius < 20) {
-        show_description('Mild', 'mild.jpg');
+        show_description('Mild', 'descriptive_images/mild.jpg');
     } else if (celsius < 25) {
-        show_description('Perfect', 'perfect.jpg');
+        show_description('Perfect', 'descriptive_images/perfect.jpg');
     } else if (celsius < 30) {
-        show_description('Warm', 'warm.jpg');
+        show_description('Warm', 'descriptive_images/warm.jpg');
     } else if (celsius < 35) {
-        show_description('Hot', 'hot.jpg');
+        show_description('Hot', 'descriptive_images/hot.jpg');
     } else if (celsius < 45) {
-        show_description('Sweltering', 'sweltering.jpg');
+        show_description('Sweltering', 'descriptive_images/sweltering.jpg');
     } else if (celsius < 59) {
-        show_description('Scorching', 'scorching.jpg');
+        show_description('Scorching', 'descriptive_images/scorching.jpg');
     } else if (celsius < 700) {
-        show_description('Blazing', 'blazing.jpg');
+        show_description('Blazing', 'descriptive_images/blazing.jpg');
     } else if (celsius < 6000) {
-        show_description('Molten', 'molten.jpg');
+        show_description('Molten', 'descriptive_images/molten.jpg');
     } else if (celsius < 16000000) {
-        show_description('Cosmically Hot', 'cosmically_hot.jpg');
+        show_description('Cosmically Hot', 'descriptive_images/cosmically_hot.jpg');
     } else {
-        show_description('Big Bang', 'big_bang.jpg');
+        show_description('Big Bang', 'descriptive_images/big_bang.jpg');
     } 
     
 }
