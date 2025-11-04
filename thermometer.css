@@ -1,0 +1,52 @@
+.content {
+    display: flex;
+    flex-direction: row;
+
+}
+
+#image {
+    width: 400px;
+    height: 300px;
+    object-fit: cover;
+}
+
+.thermometer-container {
+    height: 500px;
+    width: 500px;
+    display: grid;
+    grid-template-areas: "thermometer-container";
+    place-items:center;
+}
+
+.thermometer-container > * {
+    grid-area: thermometer-container;
+}
+
+.slider {
+    position: relative;
+    bottom: 12px;
+    height: 30px;
+    width: 425px;
+    rotate: 270deg;
+    opacity: 0;
+}
+
+/* @keyframes changeColor {
+    from {
+        fill: #FF0000;
+        stroke: #FF0000;
+    }
+
+    to {
+        fill: #256fff;
+        stroke: #256fff;
+    }
+}
+
+#circle {
+    animation: changeColor 1s linear 1;
+}
+
+#mercury {
+    animation: changeColor 1s linear 1;
+} */
