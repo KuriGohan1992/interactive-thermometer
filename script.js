@@ -33,7 +33,7 @@ function show_conversions(temperature) {
     } else if (celsius < -250) {
         show_fun_fact('If you are exposed to this temperature even if it is just for a thousandth of a second, your whole body would freeze.');
     } else if (celsius < -230) {
-        show_fun_fact('Average Temperature on the surface of Pluto, the farthest planet orbiting our Sun.');
+        show_fun_fact('-225˚C is the average temperature on the surface of Pluto, the farthest planet orbiting our Sun.');
     } else if (celsius < -210) {
         show_fun_fact('At this temperature oxygen freezes and it will be impossible to breathe.');
     } else if (celsius < -170) {
