@@ -1,7 +1,8 @@
 .content {
     display: flex;
     flex-direction: row;
-
+    flex-wrap: wrap;
+    justify-content: center;
 }
 
 #image {
@@ -29,6 +30,12 @@
     width: 425px;
     rotate: 270deg;
     opacity: 0;
+}
+
+.video-container {
+    margin-top: 20px;
+    width: 896px;
+    height: 504px;
 }
 
 /* @keyframes changeColor {
