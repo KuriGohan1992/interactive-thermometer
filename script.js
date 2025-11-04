@@ -166,9 +166,13 @@ function show_conversions(temperature) {
 
     const circle = document.getElementById('circle');
 
-    if (celsius < -273.15) {
+    if (celsius < -1000) {
+        mercury.style.fill = circle.style.fill = '#00047e';
+    } else if (celsius < -273.15) {
+        mercury.style.fill = circle.style.fill = '#0038b9';
+    } else if (celsius < -200) {
         mercury.style.fill = circle.style.fill = '#256fff';
-    } else if (celsius < -180) {
+    } else if (celsius < -150) {
         mercury.style.fill = circle.style.fill = '#257fff';
     } else if (celsius < -100) {
         mercury.style.fill = circle.style.fill = '#258fff';
