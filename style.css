@@ -37,6 +37,10 @@
     transition: fill 0.5s ease-out;
 }
 
+#thermometer-input {
+    width: 8rem;
+}
+
 #image {
     width: 400px;
     height: 300px;
@@ -47,3 +51,13 @@
     width: 400px;
     flex-wrap: wrap;
 }
+
+
+
+
+
+
+
+
+
+

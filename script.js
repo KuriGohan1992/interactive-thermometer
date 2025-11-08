@@ -1,16 +1,76 @@
-function show_conversions(temperature) {
+let inputField;
+
+function convertTemps(value, from, to) {
+    if (from === '˚C') {
+        if (to === '˚C') {
+            return value;
+        } else if (to === '˚F') {
+            return 9/5 * value + 32;
+        } else if (to === 'K') {
+            return value + 273.15;
+        } else {
+            return 'NaN';
+        }
+    } else if (from === '˚F') {
+        if (to === '˚C') {
+            return (value - 32) * 5/9
+        } else if (to === '˚F') {
+            return value;
+        } else if (to === 'K') {
+            return ((value - 32) * 5/9) + 273.15;
+        } else {
+            return 'NaN';
+        }
+    } else if (from === 'K') {
+        if (to === '˚C') {
+            return value - 273.15;
+        } else if (to === '˚F') {
+            return 9/5 * (value - 273.15) + 32
+        } else if (to === 'K') {
+            return value;
+        } else {
+            return 'NaN';
+        }
+    } else {
+        return 'NaN';
+    }
+}
+
+function changeThermometer(unit) {
+    const slider = document.getElementById('thermometer-slider')
+    slider.setAttribute('min', `${convertTemps(-20, '˚C', unit)}`);
+    slider.setAttribute('max', `${convertTemps(120, '˚C', unit)}`);
+
+    document.querySelectorAll('text').forEach(txt => {
+        // txt.innerText = convertTemps(txt.innerText.replace ( /[^\d.]/g, '' ), )
+        const value = parseFloat(txt.innerHTML.replace( /[^\d-.]/g, '' ));
+        const from = txt.innerHTML.replace( /[\d-.]/g, '' );
+
+        txt.innerHTML = +convertTemps(value, from, unit).toFixed(2) + unit;
+    })
+}
+
+function show_conversions(temperature=0) {
+
     if (isNaN(temperature)) {
         alert("Please enter a valid temperature.");
-        document.getElementById('thermometer-input').value = "";
+        inputField.value = "";
         return;
+    } else if (temperature === "") {
+        show_conversions(0);
+        return;        
     }
 
-    const celsius = parseFloat(temperature);
-    const fahrenheit = (celsius * 1.8 + 32).toFixed(2);
-    const kelvin = (celsius + 273.15).toFixed(2);
-    document.getElementById('celsius').innerHTML = celsius;
-    document.getElementById('fahrenheit').innerHTML = fahrenheit;
-    document.getElementById('kelvin').innerHTML = kelvin;
+    
+    const unit = inputField.getAttribute('placeholder');
+    changeThermometer(unit);
+
+    const celsius = +(parseFloat(convertTemps(temperature, unit, '˚C')).toFixed(2));    
+    const fahrenheit = +(celsius * 1.8 + 32).toFixed(2);
+    const kelvin = +(celsius + 273.15).toFixed(2);
+    document.getElementById('celsius').innerHTML = `${celsius}˚C`;
+    document.getElementById('fahrenheit').innerHTML = `${fahrenheit}˚F`;;
+    document.getElementById('kelvin').innerHTML = `${kelvin}K`;;
 
     const mercury_level = 440 - (celsius + 20)*2.89285714286;
     const mercury = document.getElementById('mercury');
@@ -227,16 +287,28 @@ function show_description(adjective, img_path) {
 }
 
 document.addEventListener('DOMContentLoaded', () => {
-    const input = document.getElementById('thermometer-input');
-    show_conversions(0);
-    input.value = "";
+    inputField = document.getElementById('thermometer-input');
+    show_conversions();
+    inputField.value = "";
     document.getElementById('thermometer-slider').oninput = function() {
         show_conversions(this.value);
     };
 
-    input.addEventListener('keypress', event => {
+    document.getElementById('thermometer-input').oninput = function() {
+        show_conversions(this.value);
+    };
+
+    [...document.getElementsByClassName('temp-btn')].forEach(button => {
+    // document.querySelectorAll('.temp-btn').forEach(button => {
+        button.addEventListener('click', () => {
+            document.getElementById('thermometer-input').setAttribute('placeholder', button.innerText);
+            show_conversions();
+        });
+    });
+
+    inputField.addEventListener('keypress', event => {
         if (event.key === 'Enter') {
-            show_conversions(input.value)
+            show_conversions(inputField.value)
 
         }
     });
