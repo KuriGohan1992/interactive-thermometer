@@ -1,4 +1,5 @@
 let inputField;
+let slider;
 
 function convertTemps(value, from, to) {
     if (from === '˚C') {
@@ -9,7 +10,7 @@ function convertTemps(value, from, to) {
         } else if (to === 'K') {
             return value + 273.15;
         } else {
-            return 'NaN';
+            return NaN;
         }
     } else if (from === '˚F') {
         if (to === '˚C') {
@@ -19,7 +20,7 @@ function convertTemps(value, from, to) {
         } else if (to === 'K') {
             return ((value - 32) * 5/9) + 273.15;
         } else {
-            return 'NaN';
+            return NaN;
         }
     } else if (from === 'K') {
         if (to === '˚C') {
@@ -29,15 +30,14 @@ function convertTemps(value, from, to) {
         } else if (to === 'K') {
             return value;
         } else {
-            return 'NaN';
+            return NaN;
         }
     } else {
-        return 'NaN';
+        return NaN;
     }
 }
 
 function changeThermometer(unit) {
-    const slider = document.getElementById('thermometer-slider')
     slider.setAttribute('min', `${convertTemps(-20, '˚C', unit)}`);
     slider.setAttribute('max', `${convertTemps(120, '˚C', unit)}`);
 
@@ -64,10 +64,12 @@ function show_conversions(temperature=0) {
     
     const unit = inputField.getAttribute('placeholder');
     changeThermometer(unit);
+    let celsius;
 
-    const celsius = +(parseFloat(convertTemps(temperature, unit, '˚C')).toFixed(2));    
+    celsius = parseFloat(convertTemps(temperature, unit, '˚C'));    
     const fahrenheit = +(celsius * 1.8 + 32).toFixed(2);
     const kelvin = +(celsius + 273.15).toFixed(2);
+    celsius = +(celsius).toFixed(2);
     document.getElementById('celsius').innerHTML = `${celsius}˚C`;
     document.getElementById('fahrenheit').innerHTML = `${fahrenheit}˚F`;;
     document.getElementById('kelvin').innerHTML = `${kelvin}K`;;
@@ -288,13 +290,18 @@ function show_description(adjective, img_path) {
 
 document.addEventListener('DOMContentLoaded', () => {
     inputField = document.getElementById('thermometer-input');
+    slider = document.getElementById('thermometer-slider');
     show_conversions();
     inputField.value = "";
-    document.getElementById('thermometer-slider').oninput = function() {
+
+
+    slider.oninput = function() {
+        inputField.value = +parseFloat(slider.value).toFixed(2);
         show_conversions(this.value);
     };
 
-    document.getElementById('thermometer-input').oninput = function() {
+    inputField.oninput = function() {
+        slider.value = +parseFloat(inputField.value).toFixed(2);
         show_conversions(this.value);
     };
 
@@ -302,7 +309,7 @@ document.addEventListener('DOMContentLoaded', () => {
     // document.querySelectorAll('.temp-btn').forEach(button => {
         button.addEventListener('click', () => {
             document.getElementById('thermometer-input').setAttribute('placeholder', button.innerText);
-            show_conversions();
+            show_conversions(inputField.value);
         });
     });
 
@@ -312,4 +319,22 @@ document.addEventListener('DOMContentLoaded', () => {
 
         }
     });
+
+    document.querySelectorAll('.arith-btn').forEach(btn => {
+        btn.addEventListener('click', () => {
+            if (btn.dataset.op === 'plus') {
+                inputField.value++;
+            } else if (btn.dataset.op === 'minus') {
+                inputField.value--;
+            } else {
+                alert('You did something wrong bro, how?');
+            }
+            show_conversions(inputField.value);
+        })
+
+
+
+        
+    })
+
 })

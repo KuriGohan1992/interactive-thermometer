@@ -4,6 +4,7 @@
         <title>Thermometer</title>
         <link rel="stylesheet" href="style.css">
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css">
+        
         <script src="script.js"></script>
     </head>
     <body>
@@ -112,9 +113,9 @@
                     <h3>Fahrenheit: <span id="fahrenheit"></span></h3>
                     <h3>Kelvin: <span id="kelvin"></span></h3>
                     <div>
-                        <button id="plus-btn">+</button>
+                        <button data-op="minus" class="arith-btn" id="minus-btn">–</button>
                         <input class="input" id="thermometer-input" type="number" placeholder="˚C">
-                        <button id="plus-btn">–</button>
+                        <button data-op="plus" class="arith-btn" id="plus-btn">+</button>
                     </div>
                     <button data-unit="celsius" class="temp-btn" id="celsius-btn">˚C</button>
                     <button data-unit="fahrenheit" class="temp-btn" id="fahrenheit-btn">˚F</button>
