@@ -11,151 +11,163 @@
         <script async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     </head>
     <body>
-        <div>
-            <h1>What is Temperature?</h1>
-            <h4>Temperature measures how hot or cold something is. It tells us how fast the particles inside a substance are moving, the hotter it is, the faster they move. Every temperature scale measures the same thing, but uses different starting points and unit sizes.</h4>
-            <h1>
-                The Interactive Thermometer
-            </h1>
-            <h4>This interactive thermometer lets you visualize temperature changes in real time. Adjust the values, switch units, and see how different temperature affects the world around us.</h4>
-            <h4>How to adjust the values:
-                <ul>
-                    <li>Click the thermometer at the level you want to set it to</li>
-                    <li>Drag the "mercury" inside the thermometer</li>
-                    <li>Press the up/down arrow keys to increase/decrease the value</li>
-                    <li>Manually input a value by typing it on the input field</li>
-                    <li>Click the +/– buttons beside the input field</li>
-                </ul>
-            </h4>  
+        <div id="sidebar">
+            <h2 style="text-align: center;">Menu</h2>
+            <ul style="list-style: none;">
+                <li>Temperature and Heat</li>
+                <a href="https://jade-notauserdotcom.github.io/InHeatTransfer/index.html"><li>Heat Transfer Demonstration</li></a>
+                <a href="https://super-kriztan.github.io/Conversion-Quiz/"><li>Quiz: Temperature and Heat</li>
+                <a href="https://ronald2117.github.io/calphy-website/"><li>Main Menu</li></a>
+            </ul>
         </div>
-        <div class="content">
-            <div class="thermometer-container">
-                <input class="slider" id="thermometer-slider" type="range" min="-20" max="120" step="0.01" value="0">
-                <?xml version="1.0" encoding="UTF-8" ?><svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="150" height="500">	<path d="M-7.105427357601002e-14 500 L150 500 L150 -2.842170943040401e-14 L-1.4210854715202004e-14 -2.842170943040401e-14 L-7.105427357601002e-14 500 Z" stroke="rgb(255, 255, 255)" stroke-opacity="1" stroke-width="1" stroke-linecap="square" fill="rgb(255, 255, 255)" fill-opacity="1"></path>
-                    <line x1="65" y1="30" x2="65" y2="450" stroke="rgb(0, 0, 0)" stroke-opacity="1" stroke-width="1" stroke-linecap="round" stroke-dasharray="undefined"></line>
-                    <line x1="85" y1="30" x2="85" y2="450" stroke="rgb(0, 0, 0)" stroke-opacity="1" stroke-width="1" stroke-linecap="round" stroke-dasharray="undefined"></line>
-                    <path d="M 85 30 A 10 10 0 0 0 65 30" stroke="rgb(0, 0, 0)" stroke-opacity="1" stroke-width="1" stroke-linecap="square" fill="white" fill-opacity="0"></path>
-                    <path d="M 64.99999999999999 450.1794919243112 A 20 20 0 1 0 85 450.1794919243112" stroke="rgb(0, 0, 0)" stroke-opacity="1" stroke-width="1" stroke-linecap="square" fill="white" fill-opacity="0"></path>
-                    <line x1="65" y1="440" x2="85" y2="440" stroke="rgb(0, 0, 0)" stroke-opacity="1" stroke-width="1" stroke-linecap="round" stroke-dasharray="undefined"></line>
-                    <text x="0" y="0" text-anchor="end" dominant-baseline="middle" transform="translate(57,440) rotate(0)" font-family="Sans-Serif" font-size="10pt" font-weight="normal" fill="rgb(0, 0, 0)" fill-opacity="1">-20˚C</text>
-                    <line x1="70" y1="434.2142857142857" x2="80" y2="434.2142857142857" stroke="rgb(128, 128, 128)" stroke-opacity="1" stroke-width="1" stroke-linecap="round" stroke-dasharray="undefined"></line>
-                    <line x1="70" y1="428.42857142857144" x2="80" y2="428.42857142857144" stroke="rgb(128, 128, 128)" stroke-opacity="1" stroke-width="1" stroke-linecap="round" stroke-dasharray="undefined"></line>
-                    <line x1="70" y1="422.64285714285717" x2="80" y2="422.64285714285717" stroke="rgb(128, 128, 128)" stroke-opacity="1" stroke-width="1" stroke-linecap="round" stroke-dasharray="undefined"></line>
-                    <line x1="70" y1="416.85714285714283" x2="80" y2="416.85714285714283" stroke="rgb(128, 128, 128)" stroke-opacity="1" stroke-width="1" stroke-linecap="round" stroke-dasharray="undefined"></line>
-                    <line x1="65" y1="411.07142857142856" x2="85" y2="411.07142857142856" stroke="rgb(0, 0, 0)" stroke-opacity="1" stroke-width="1" stroke-linecap="round" stroke-dasharray="undefined"></line>
-                    <text x="0" y="0" text-anchor="end" dominant-baseline="middle" transform="translate(57,411.07142857142856) rotate(0)" font-family="Sans-Serif" font-size="10pt" font-weight="normal" fill="rgb(0, 0, 0)" fill-opacity="1">-10˚C</text>
-                    <line x1="70" y1="405.2857142857143" x2="80" y2="405.2857142857143" stroke="rgb(128, 128, 128)" stroke-opacity="1" stroke-width="1" stroke-linecap="round" stroke-dasharray="undefined"></line>
-                    <line x1="70" y1="399.5" x2="80" y2="399.5" stroke="rgb(128, 128, 128)" stroke-opacity="1" stroke-width="1" stroke-linecap="round" stroke-dasharray="undefined"></line>
-                    <line x1="70" y1="393.7142857142857" x2="80" y2="393.7142857142857" stroke="rgb(128, 128, 128)" stroke-opacity="1" stroke-width="1" stroke-linecap="round" stroke-dasharray="undefined"></line>
-                    <line x1="70" y1="387.9285714285714" x2="80" y2="387.9285714285714" stroke="rgb(128, 128, 128)" stroke-opacity="1" stroke-width="1" stroke-linecap="round" stroke-dasharray="undefined"></line>
-                    <line x1="65" y1="382.14285714285717" x2="85" y2="382.14285714285717" stroke="rgb(0, 0, 0)" stroke-opacity="1" stroke-width="1" stroke-linecap="round" stroke-dasharray="undefined"></line>
-                    <text x="0" y="0" text-anchor="end" dominant-baseline="middle" transform="translate(57,382.14285714285717) rotate(0)" font-family="Sans-Serif" font-size="10pt" font-weight="normal" fill="rgb(0, 0, 0)" fill-opacity="1">0˚C</text>
-                    <line x1="70" y1="376.3571428571429" x2="80" y2="376.3571428571429" stroke="rgb(128, 128, 128)" stroke-opacity="1" stroke-width="1" stroke-linecap="round" stroke-dasharray="undefined"></line>
-                    <line x1="70" y1="370.5714285714286" x2="80" y2="370.5714285714286" stroke="rgb(128, 128, 128)" stroke-opacity="1" stroke-width="1" stroke-linecap="round" stroke-dasharray="undefined"></line>
-                    <line x1="70" y1="364.78571428571433" x2="80" y2="364.78571428571433" stroke="rgb(128, 128, 128)" stroke-opacity="1" stroke-width="1" stroke-linecap="round" stroke-dasharray="undefined"></line>
-                    <line x1="70" y1="359" x2="80" y2="359" stroke="rgb(128, 128, 128)" stroke-opacity="1" stroke-width="1" stroke-linecap="round" stroke-dasharray="undefined"></line>
-                    <line x1="65" y1="353.2142857142857" x2="85" y2="353.2142857142857" stroke="rgb(0, 0, 0)" stroke-opacity="1" stroke-width="1" stroke-linecap="round" stroke-dasharray="undefined"></line>
-                    <text x="0" y="0" text-anchor="end" dominant-baseline="middle" transform="translate(57,353.2142857142857) rotate(0)" font-family="Sans-Serif" font-size="10pt" font-weight="normal" fill="rgb(0, 0, 0)" fill-opacity="1">10˚C</text>
-                    <line x1="70" y1="347.42857142857144" x2="80" y2="347.42857142857144" stroke="rgb(128, 128, 128)" stroke-opacity="1" stroke-width="1" stroke-linecap="round" stroke-dasharray="undefined"></line>
-                    <line x1="70" y1="341.64285714285717" x2="80" y2="341.64285714285717" stroke="rgb(128, 128, 128)" stroke-opacity="1" stroke-width="1" stroke-linecap="round" stroke-dasharray="undefined"></line>
-                    <line x1="70" y1="335.8571428571429" x2="80" y2="335.8571428571429" stroke="rgb(128, 128, 128)" stroke-opacity="1" stroke-width="1" stroke-linecap="round" stroke-dasharray="undefined"></line>
-                    <line x1="70" y1="330.07142857142856" x2="80" y2="330.07142857142856" stroke="rgb(128, 128, 128)" stroke-opacity="1" stroke-width="1" stroke-linecap="round" stroke-dasharray="undefined"></line>
-                    <line x1="65" y1="324.2857142857143" x2="85" y2="324.2857142857143" stroke="rgb(0, 0, 0)" stroke-opacity="1" stroke-width="1" stroke-linecap="round" stroke-dasharray="undefined"></line>
-                    <text x="0" y="0" text-anchor="end" dominant-baseline="middle" transform="translate(57,324.2857142857143) rotate(0)" font-family="Sans-Serif" font-size="10pt" font-weight="normal" fill="rgb(0, 0, 0)" fill-opacity="1">20˚C</text>
-                    <line x1="70" y1="318.5" x2="80" y2="318.5" stroke="rgb(128, 128, 128)" stroke-opacity="1" stroke-width="1" stroke-linecap="round" stroke-dasharray="undefined"></line>
-                    <line x1="70" y1="312.7142857142857" x2="80" y2="312.7142857142857" stroke="rgb(128, 128, 128)" stroke-opacity="1" stroke-width="1" stroke-linecap="round" stroke-dasharray="undefined"></line>
-                    <line x1="70" y1="306.92857142857144" x2="80" y2="306.92857142857144" stroke="rgb(128, 128, 128)" stroke-opacity="1" stroke-width="1" stroke-linecap="round" stroke-dasharray="undefined"></line>
-                    <line x1="70" y1="301.1428571428571" x2="80" y2="301.1428571428571" stroke="rgb(128, 128, 128)" stroke-opacity="1" stroke-width="1" stroke-linecap="round" stroke-dasharray="undefined"></line>
-                    <line x1="65" y1="295.3571428571429" x2="85" y2="295.3571428571429" stroke="rgb(0, 0, 0)" stroke-opacity="1" stroke-width="1" stroke-linecap="round" stroke-dasharray="undefined"></line>
-                    <text x="0" y="0" text-anchor="end" dominant-baseline="middle" transform="translate(57,295.3571428571429) rotate(0)" font-family="Sans-Serif" font-size="10pt" font-weight="normal" fill="rgb(0, 0, 0)" fill-opacity="1">30˚C</text>
-                    <line x1="70" y1="289.5714285714286" x2="80" y2="289.5714285714286" stroke="rgb(128, 128, 128)" stroke-opacity="1" stroke-width="1" stroke-linecap="round" stroke-dasharray="undefined"></line>
-                    <line x1="70" y1="283.78571428571433" x2="80" y2="283.78571428571433" stroke="rgb(128, 128, 128)" stroke-opacity="1" stroke-width="1" stroke-linecap="round" stroke-dasharray="undefined"></line>
-                    <line x1="70" y1="278.00000000000006" x2="80" y2="278.00000000000006" stroke="rgb(128, 128, 128)" stroke-opacity="1" stroke-width="1" stroke-linecap="round" stroke-dasharray="undefined"></line>
-                    <line x1="70" y1="272.2142857142857" x2="80" y2="272.2142857142857" stroke="rgb(128, 128, 128)" stroke-opacity="1" stroke-width="1" stroke-linecap="round" stroke-dasharray="undefined"></line>
-                    <line x1="65" y1="266.42857142857144" x2="85" y2="266.42857142857144" stroke="rgb(0, 0, 0)" stroke-opacity="1" stroke-width="1" stroke-linecap="round" stroke-dasharray="undefined"></line>
-                    <text x="0" y="0" text-anchor="end" dominant-baseline="middle" transform="translate(57,266.42857142857144) rotate(0)" font-family="Sans-Serif" font-size="10pt" font-weight="normal" fill="rgb(0, 0, 0)" fill-opacity="1">40˚C</text>
-                    <line x1="70" y1="260.64285714285717" x2="80" y2="260.64285714285717" stroke="rgb(128, 128, 128)" stroke-opacity="1" stroke-width="1" stroke-linecap="round" stroke-dasharray="undefined"></line>
-                    <line x1="70" y1="254.85714285714286" x2="80" y2="254.85714285714286" stroke="rgb(128, 128, 128)" stroke-opacity="1" stroke-width="1" stroke-linecap="round" stroke-dasharray="undefined"></line>
-                    <line x1="70" y1="249.07142857142858" x2="80" y2="249.07142857142858" stroke="rgb(128, 128, 128)" stroke-opacity="1" stroke-width="1" stroke-linecap="round" stroke-dasharray="undefined"></line>
-                    <line x1="70" y1="243.2857142857143" x2="80" y2="243.2857142857143" stroke="rgb(128, 128, 128)" stroke-opacity="1" stroke-width="1" stroke-linecap="round" stroke-dasharray="undefined"></line>
-                    <line x1="65" y1="237.5" x2="85" y2="237.5" stroke="rgb(0, 0, 0)" stroke-opacity="1" stroke-width="1" stroke-linecap="round" stroke-dasharray="undefined"></line>
-                    <text x="0" y="0" text-anchor="end" dominant-baseline="middle" transform="translate(57,237.5) rotate(0)" font-family="Sans-Serif" font-size="10pt" font-weight="normal" fill="rgb(0, 0, 0)" fill-opacity="1">50˚C</text>
-                    <line x1="70" y1="231.71428571428572" x2="80" y2="231.71428571428572" stroke="rgb(128, 128, 128)" stroke-opacity="1" stroke-width="1" stroke-linecap="round" stroke-dasharray="undefined"></line>
-                    <line x1="70" y1="225.92857142857142" x2="80" y2="225.92857142857142" stroke="rgb(128, 128, 128)" stroke-opacity="1" stroke-width="1" stroke-linecap="round" stroke-dasharray="undefined"></line>
-                    <line x1="70" y1="220.14285714285714" x2="80" y2="220.14285714285714" stroke="rgb(128, 128, 128)" stroke-opacity="1" stroke-width="1" stroke-linecap="round" stroke-dasharray="undefined"></line>
-                    <line x1="70" y1="214.35714285714286" x2="80" y2="214.35714285714286" stroke="rgb(128, 128, 128)" stroke-opacity="1" stroke-width="1" stroke-linecap="round" stroke-dasharray="undefined"></line>
-                    <line x1="65" y1="208.57142857142858" x2="85" y2="208.57142857142858" stroke="rgb(0, 0, 0)" stroke-opacity="1" stroke-width="1" stroke-linecap="round" stroke-dasharray="undefined"></line>
-                    <text x="0" y="0" text-anchor="end" dominant-baseline="middle" transform="translate(57,208.57142857142858) rotate(0)" font-family="Sans-Serif" font-size="10pt" font-weight="normal" fill="rgb(0, 0, 0)" fill-opacity="1">60˚C</text>
-                    <line x1="70" y1="202.7857142857143" x2="80" y2="202.7857142857143" stroke="rgb(128, 128, 128)" stroke-opacity="1" stroke-width="1" stroke-linecap="round" stroke-dasharray="undefined"></line>
-                    <line x1="70" y1="197" x2="80" y2="197" stroke="rgb(128, 128, 128)" stroke-opacity="1" stroke-width="1" stroke-linecap="round" stroke-dasharray="undefined"></line>
-                    <line x1="70" y1="191.21428571428572" x2="80" y2="191.21428571428572" stroke="rgb(128, 128, 128)" stroke-opacity="1" stroke-width="1" stroke-linecap="round" stroke-dasharray="undefined"></line>
-                    <line x1="70" y1="185.42857142857144" x2="80" y2="185.42857142857144" stroke="rgb(128, 128, 128)" stroke-opacity="1" stroke-width="1" stroke-linecap="round" stroke-dasharray="undefined"></line>
-                    <line x1="65" y1="179.64285714285717" x2="85" y2="179.64285714285717" stroke="rgb(0, 0, 0)" stroke-opacity="1" stroke-width="1" stroke-linecap="round" stroke-dasharray="undefined"></line>
-                    <text x="0" y="0" text-anchor="end" dominant-baseline="middle" transform="translate(57,179.64285714285717) rotate(0)" font-family="Sans-Serif" font-size="10pt" font-weight="normal" fill="rgb(0, 0, 0)" fill-opacity="1">70˚C</text>
-                    <line x1="70" y1="173.8571428571429" x2="80" y2="173.8571428571429" stroke="rgb(128, 128, 128)" stroke-opacity="1" stroke-width="1" stroke-linecap="round" stroke-dasharray="undefined"></line>
-                    <line x1="70" y1="168.07142857142858" x2="80" y2="168.07142857142858" stroke="rgb(128, 128, 128)" stroke-opacity="1" stroke-width="1" stroke-linecap="round" stroke-dasharray="undefined"></line>
-                    <line x1="70" y1="162.2857142857143" x2="80" y2="162.2857142857143" stroke="rgb(128, 128, 128)" stroke-opacity="1" stroke-width="1" stroke-linecap="round" stroke-dasharray="undefined"></line>
-                    <line x1="70" y1="156.50000000000003" x2="80" y2="156.50000000000003" stroke="rgb(128, 128, 128)" stroke-opacity="1" stroke-width="1" stroke-linecap="round" stroke-dasharray="undefined"></line>
-                    <line x1="65" y1="150.71428571428572" x2="85" y2="150.71428571428572" stroke="rgb(0, 0, 0)" stroke-opacity="1" stroke-width="1" stroke-linecap="round" stroke-dasharray="undefined"></line>
-                    <text x="0" y="0" text-anchor="end" dominant-baseline="middle" transform="translate(57,150.71428571428572) rotate(0)" font-family="Sans-Serif" font-size="10pt" font-weight="normal" fill="rgb(0, 0, 0)" fill-opacity="1">80˚C</text>
-                    <line x1="70" y1="144.92857142857144" x2="80" y2="144.92857142857144" stroke="rgb(128, 128, 128)" stroke-opacity="1" stroke-width="1" stroke-linecap="round" stroke-dasharray="undefined"></line>
-                    <line x1="70" y1="139.14285714285714" x2="80" y2="139.14285714285714" stroke="rgb(128, 128, 128)" stroke-opacity="1" stroke-width="1" stroke-linecap="round" stroke-dasharray="undefined"></line>
-                    <line x1="70" y1="133.35714285714286" x2="80" y2="133.35714285714286" stroke="rgb(128, 128, 128)" stroke-opacity="1" stroke-width="1" stroke-linecap="round" stroke-dasharray="undefined"></line>
-                    <line x1="70" y1="127.57142857142858" x2="80" y2="127.57142857142858" stroke="rgb(128, 128, 128)" stroke-opacity="1" stroke-width="1" stroke-linecap="round" stroke-dasharray="undefined"></line>
-                    <line x1="65" y1="121.78571428571428" x2="85" y2="121.78571428571428" stroke="rgb(0, 0, 0)" stroke-opacity="1" stroke-width="1" stroke-linecap="round" stroke-dasharray="undefined"></line>
-                    <text x="0" y="0" text-anchor="end" dominant-baseline="middle" transform="translate(57,121.78571428571428) rotate(0)" font-family="Sans-Serif" font-size="10pt" font-weight="normal" fill="rgb(0, 0, 0)" fill-opacity="1">90˚C</text>
-                    <line x1="70" y1="115.99999999999999" x2="80" y2="115.99999999999999" stroke="rgb(128, 128, 128)" stroke-opacity="1" stroke-width="1" stroke-linecap="round" stroke-dasharray="undefined"></line>
-                    <line x1="70" y1="110.21428571428571" x2="80" y2="110.21428571428571" stroke="rgb(128, 128, 128)" stroke-opacity="1" stroke-width="1" stroke-linecap="round" stroke-dasharray="undefined"></line>
-                    <line x1="70" y1="104.42857142857142" x2="80" y2="104.42857142857142" stroke="rgb(128, 128, 128)" stroke-opacity="1" stroke-width="1" stroke-linecap="round" stroke-dasharray="undefined"></line>
-                    <line x1="70" y1="98.64285714285714" x2="80" y2="98.64285714285714" stroke="rgb(128, 128, 128)" stroke-opacity="1" stroke-width="1" stroke-linecap="round" stroke-dasharray="undefined"></line>
-                    <line x1="65" y1="92.85714285714289" x2="85" y2="92.85714285714289" stroke="rgb(0, 0, 0)" stroke-opacity="1" stroke-width="1" stroke-linecap="round" stroke-dasharray="undefined"></line>
-                    <text x="0" y="0" text-anchor="end" dominant-baseline="middle" transform="translate(57,92.85714285714289) rotate(0)" font-family="Sans-Serif" font-size="10pt" font-weight="normal" fill="rgb(0, 0, 0)" fill-opacity="1">100˚C</text>
-                    <line x1="70" y1="87.0714285714286" x2="80" y2="87.0714285714286" stroke="rgb(128, 128, 128)" stroke-opacity="1" stroke-width="1" stroke-linecap="round" stroke-dasharray="undefined"></line>
-                    <line x1="70" y1="81.28571428571432" x2="80" y2="81.28571428571432" stroke="rgb(128, 128, 128)" stroke-opacity="1" stroke-width="1" stroke-linecap="round" stroke-dasharray="undefined"></line>
-                    <line x1="70" y1="75.50000000000003" x2="80" y2="75.50000000000003" stroke="rgb(128, 128, 128)" stroke-opacity="1" stroke-width="1" stroke-linecap="round" stroke-dasharray="undefined"></line>
-                    <line x1="70" y1="69.71428571428575" x2="80" y2="69.71428571428575" stroke="rgb(128, 128, 128)" stroke-opacity="1" stroke-width="1" stroke-linecap="round" stroke-dasharray="undefined"></line>
-                    <line x1="65" y1="63.928571428571445" x2="85" y2="63.928571428571445" stroke="rgb(0, 0, 0)" stroke-opacity="1" stroke-width="1" stroke-linecap="round" stroke-dasharray="undefined"></line>
-                    <text x="0" y="0" text-anchor="end" dominant-baseline="middle" transform="translate(57,63.928571428571445) rotate(0)" font-family="Sans-Serif" font-size="10pt" font-weight="normal" fill="rgb(0, 0, 0)" fill-opacity="1">110˚C</text>
-                    <line x1="70" y1="58.14285714285716" x2="80" y2="58.14285714285716" stroke="rgb(128, 128, 128)" stroke-opacity="1" stroke-width="1" stroke-linecap="round" stroke-dasharray="undefined"></line>
-                    <line x1="70" y1="52.357142857142875" x2="80" y2="52.357142857142875" stroke="rgb(128, 128, 128)" stroke-opacity="1" stroke-width="1" stroke-linecap="round" stroke-dasharray="undefined"></line>
-                    <line x1="70" y1="46.571428571428584" x2="80" y2="46.571428571428584" stroke="rgb(128, 128, 128)" stroke-opacity="1" stroke-width="1" stroke-linecap="round" stroke-dasharray="undefined"></line>
-                    <line x1="70" y1="40.785714285714306" x2="80" y2="40.785714285714306" stroke="rgb(128, 128, 128)" stroke-opacity="1" stroke-width="1" stroke-linecap="round" stroke-dasharray="undefined"></line>
-                    <line x1="65" y1="35" x2="85" y2="35" stroke="rgb(0, 0, 0)" stroke-opacity="1" stroke-width="1" stroke-linecap="round" stroke-dasharray="undefined"></line>
-                    <text x="0" y="0" text-anchor="end" dominant-baseline="middle" transform="translate(57,35) rotate(0)" font-family="Sans-Serif" font-size="10pt" font-weight="normal" fill="rgb(0, 0, 0)" fill-opacity="1">120˚C</text>
-                    <circle id="circle" cx="75" cy="467.5" r="16" fill="rgb(255, 0, 0)" fill-opacity="1"></circle>
-                    <path id="mercury" d="M69 460 L80.99999999999999 460 L81 382.14285714285717 L69 382.14285714285717 L69 460 Z" fill="rgb(255, 0, 0)" fill-opacity="1"></path>
-                </svg>
-            </div>
+        <div id="main-content">
             <div>
+                <h1>What is Temperature?</h1>
+                <h4>Temperature measures how hot or cold something is. It tells us how fast the particles inside a substance are moving, the hotter it is, the faster they move. Every temperature scale measures the same thing, but uses different starting points and unit sizes.</h4>
+                <h1>
+                    The Interactive Thermometer
+                </h1>
+                <h4>This interactive thermometer lets you visualize temperature changes in real time. Adjust the values, switch units, and see how different temperature affects the world around us.</h4>
+                <h4>How to adjust the values:
+                    <ul>
+                        <li>Click the thermometer at the level you want to set it to</li>
+                        <li>Drag the "mercury" inside the thermometer</li>
+                        <li>Press the up/down arrow keys to increase/decrease the value</li>
+                        <li>Manually input a value by typing it on the input field</li>
+                        <li>Click the +/– buttons beside the input field</li>
+                    </ul>
+                </h4>  
+            </div>
+            <div class="content">
                 <div>
-                    <button data-unit="celsius" class="temp-btn" id="celsius-btn">˚C</button>
-                    <button data-unit="fahrenheit" class="temp-btn" id="fahrenheit-btn">˚F</button>
-                    <button data-unit="kelvin" class="temp-btn" id="kelvin-btn">K</button>
+                    <div class="thermometer-container">
+                        <input class="slider" id="thermometer-slider" type="range" min="-20" max="120" step="0.01" value="0">
+                        <?xml version="1.0" encoding="UTF-8" ?><svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="150" height="500">	<path d="M-7.105427357601002e-14 500 L150 500 L150 -2.842170943040401e-14 L-1.4210854715202004e-14 -2.842170943040401e-14 L-7.105427357601002e-14 500 Z" stroke="rgb(255, 255, 255)" stroke-opacity="1" stroke-width="1" stroke-linecap="square" fill="rgb(255, 255, 255)" fill-opacity="1"></path>
+                            <line x1="65" y1="30" x2="65" y2="450" stroke="rgb(0, 0, 0)" stroke-opacity="1" stroke-width="1" stroke-linecap="round" stroke-dasharray="undefined"></line>
+                            <line x1="85" y1="30" x2="85" y2="450" stroke="rgb(0, 0, 0)" stroke-opacity="1" stroke-width="1" stroke-linecap="round" stroke-dasharray="undefined"></line>
+                            <path d="M 85 30 A 10 10 0 0 0 65 30" stroke="rgb(0, 0, 0)" stroke-opacity="1" stroke-width="1" stroke-linecap="square" fill="white" fill-opacity="0"></path>
+                            <path d="M 64.99999999999999 450.1794919243112 A 20 20 0 1 0 85 450.1794919243112" stroke="rgb(0, 0, 0)" stroke-opacity="1" stroke-width="1" stroke-linecap="square" fill="white" fill-opacity="0"></path>
+                            <line x1="65" y1="440" x2="85" y2="440" stroke="rgb(0, 0, 0)" stroke-opacity="1" stroke-width="1" stroke-linecap="round" stroke-dasharray="undefined"></line>
+                            <text x="0" y="0" text-anchor="end" dominant-baseline="middle" transform="translate(57,440) rotate(0)" font-family="Sans-Serif" font-size="10pt" font-weight="normal" fill="rgb(0, 0, 0)" fill-opacity="1">-20˚C</text>
+                            <line x1="70" y1="434.2142857142857" x2="80" y2="434.2142857142857" stroke="rgb(128, 128, 128)" stroke-opacity="1" stroke-width="1" stroke-linecap="round" stroke-dasharray="undefined"></line>
+                            <line x1="70" y1="428.42857142857144" x2="80" y2="428.42857142857144" stroke="rgb(128, 128, 128)" stroke-opacity="1" stroke-width="1" stroke-linecap="round" stroke-dasharray="undefined"></line>
+                            <line x1="70" y1="422.64285714285717" x2="80" y2="422.64285714285717" stroke="rgb(128, 128, 128)" stroke-opacity="1" stroke-width="1" stroke-linecap="round" stroke-dasharray="undefined"></line>
+                            <line x1="70" y1="416.85714285714283" x2="80" y2="416.85714285714283" stroke="rgb(128, 128, 128)" stroke-opacity="1" stroke-width="1" stroke-linecap="round" stroke-dasharray="undefined"></line>
+                            <line x1="65" y1="411.07142857142856" x2="85" y2="411.07142857142856" stroke="rgb(0, 0, 0)" stroke-opacity="1" stroke-width="1" stroke-linecap="round" stroke-dasharray="undefined"></line>
+                            <text x="0" y="0" text-anchor="end" dominant-baseline="middle" transform="translate(57,411.07142857142856) rotate(0)" font-family="Sans-Serif" font-size="10pt" font-weight="normal" fill="rgb(0, 0, 0)" fill-opacity="1">-10˚C</text>
+                            <line x1="70" y1="405.2857142857143" x2="80" y2="405.2857142857143" stroke="rgb(128, 128, 128)" stroke-opacity="1" stroke-width="1" stroke-linecap="round" stroke-dasharray="undefined"></line>
+                            <line x1="70" y1="399.5" x2="80" y2="399.5" stroke="rgb(128, 128, 128)" stroke-opacity="1" stroke-width="1" stroke-linecap="round" stroke-dasharray="undefined"></line>
+                            <line x1="70" y1="393.7142857142857" x2="80" y2="393.7142857142857" stroke="rgb(128, 128, 128)" stroke-opacity="1" stroke-width="1" stroke-linecap="round" stroke-dasharray="undefined"></line>
+                            <line x1="70" y1="387.9285714285714" x2="80" y2="387.9285714285714" stroke="rgb(128, 128, 128)" stroke-opacity="1" stroke-width="1" stroke-linecap="round" stroke-dasharray="undefined"></line>
+                            <line x1="65" y1="382.14285714285717" x2="85" y2="382.14285714285717" stroke="rgb(0, 0, 0)" stroke-opacity="1" stroke-width="1" stroke-linecap="round" stroke-dasharray="undefined"></line>
+                            <text x="0" y="0" text-anchor="end" dominant-baseline="middle" transform="translate(57,382.14285714285717) rotate(0)" font-family="Sans-Serif" font-size="10pt" font-weight="normal" fill="rgb(0, 0, 0)" fill-opacity="1">0˚C</text>
+                            <line x1="70" y1="376.3571428571429" x2="80" y2="376.3571428571429" stroke="rgb(128, 128, 128)" stroke-opacity="1" stroke-width="1" stroke-linecap="round" stroke-dasharray="undefined"></line>
+                            <line x1="70" y1="370.5714285714286" x2="80" y2="370.5714285714286" stroke="rgb(128, 128, 128)" stroke-opacity="1" stroke-width="1" stroke-linecap="round" stroke-dasharray="undefined"></line>
+                            <line x1="70" y1="364.78571428571433" x2="80" y2="364.78571428571433" stroke="rgb(128, 128, 128)" stroke-opacity="1" stroke-width="1" stroke-linecap="round" stroke-dasharray="undefined"></line>
+                            <line x1="70" y1="359" x2="80" y2="359" stroke="rgb(128, 128, 128)" stroke-opacity="1" stroke-width="1" stroke-linecap="round" stroke-dasharray="undefined"></line>
+                            <line x1="65" y1="353.2142857142857" x2="85" y2="353.2142857142857" stroke="rgb(0, 0, 0)" stroke-opacity="1" stroke-width="1" stroke-linecap="round" stroke-dasharray="undefined"></line>
+                            <text x="0" y="0" text-anchor="end" dominant-baseline="middle" transform="translate(57,353.2142857142857) rotate(0)" font-family="Sans-Serif" font-size="10pt" font-weight="normal" fill="rgb(0, 0, 0)" fill-opacity="1">10˚C</text>
+                            <line x1="70" y1="347.42857142857144" x2="80" y2="347.42857142857144" stroke="rgb(128, 128, 128)" stroke-opacity="1" stroke-width="1" stroke-linecap="round" stroke-dasharray="undefined"></line>
+                            <line x1="70" y1="341.64285714285717" x2="80" y2="341.64285714285717" stroke="rgb(128, 128, 128)" stroke-opacity="1" stroke-width="1" stroke-linecap="round" stroke-dasharray="undefined"></line>
+                            <line x1="70" y1="335.8571428571429" x2="80" y2="335.8571428571429" stroke="rgb(128, 128, 128)" stroke-opacity="1" stroke-width="1" stroke-linecap="round" stroke-dasharray="undefined"></line>
+                            <line x1="70" y1="330.07142857142856" x2="80" y2="330.07142857142856" stroke="rgb(128, 128, 128)" stroke-opacity="1" stroke-width="1" stroke-linecap="round" stroke-dasharray="undefined"></line>
+                            <line x1="65" y1="324.2857142857143" x2="85" y2="324.2857142857143" stroke="rgb(0, 0, 0)" stroke-opacity="1" stroke-width="1" stroke-linecap="round" stroke-dasharray="undefined"></line>
+                            <text x="0" y="0" text-anchor="end" dominant-baseline="middle" transform="translate(57,324.2857142857143) rotate(0)" font-family="Sans-Serif" font-size="10pt" font-weight="normal" fill="rgb(0, 0, 0)" fill-opacity="1">20˚C</text>
+                            <line x1="70" y1="318.5" x2="80" y2="318.5" stroke="rgb(128, 128, 128)" stroke-opacity="1" stroke-width="1" stroke-linecap="round" stroke-dasharray="undefined"></line>
+                            <line x1="70" y1="312.7142857142857" x2="80" y2="312.7142857142857" stroke="rgb(128, 128, 128)" stroke-opacity="1" stroke-width="1" stroke-linecap="round" stroke-dasharray="undefined"></line>
+                            <line x1="70" y1="306.92857142857144" x2="80" y2="306.92857142857144" stroke="rgb(128, 128, 128)" stroke-opacity="1" stroke-width="1" stroke-linecap="round" stroke-dasharray="undefined"></line>
+                            <line x1="70" y1="301.1428571428571" x2="80" y2="301.1428571428571" stroke="rgb(128, 128, 128)" stroke-opacity="1" stroke-width="1" stroke-linecap="round" stroke-dasharray="undefined"></line>
+                            <line x1="65" y1="295.3571428571429" x2="85" y2="295.3571428571429" stroke="rgb(0, 0, 0)" stroke-opacity="1" stroke-width="1" stroke-linecap="round" stroke-dasharray="undefined"></line>
+                            <text x="0" y="0" text-anchor="end" dominant-baseline="middle" transform="translate(57,295.3571428571429) rotate(0)" font-family="Sans-Serif" font-size="10pt" font-weight="normal" fill="rgb(0, 0, 0)" fill-opacity="1">30˚C</text>
+                            <line x1="70" y1="289.5714285714286" x2="80" y2="289.5714285714286" stroke="rgb(128, 128, 128)" stroke-opacity="1" stroke-width="1" stroke-linecap="round" stroke-dasharray="undefined"></line>
+                            <line x1="70" y1="283.78571428571433" x2="80" y2="283.78571428571433" stroke="rgb(128, 128, 128)" stroke-opacity="1" stroke-width="1" stroke-linecap="round" stroke-dasharray="undefined"></line>
+                            <line x1="70" y1="278.00000000000006" x2="80" y2="278.00000000000006" stroke="rgb(128, 128, 128)" stroke-opacity="1" stroke-width="1" stroke-linecap="round" stroke-dasharray="undefined"></line>
+                            <line x1="70" y1="272.2142857142857" x2="80" y2="272.2142857142857" stroke="rgb(128, 128, 128)" stroke-opacity="1" stroke-width="1" stroke-linecap="round" stroke-dasharray="undefined"></line>
+                            <line x1="65" y1="266.42857142857144" x2="85" y2="266.42857142857144" stroke="rgb(0, 0, 0)" stroke-opacity="1" stroke-width="1" stroke-linecap="round" stroke-dasharray="undefined"></line>
+                            <text x="0" y="0" text-anchor="end" dominant-baseline="middle" transform="translate(57,266.42857142857144) rotate(0)" font-family="Sans-Serif" font-size="10pt" font-weight="normal" fill="rgb(0, 0, 0)" fill-opacity="1">40˚C</text>
+                            <line x1="70" y1="260.64285714285717" x2="80" y2="260.64285714285717" stroke="rgb(128, 128, 128)" stroke-opacity="1" stroke-width="1" stroke-linecap="round" stroke-dasharray="undefined"></line>
+                            <line x1="70" y1="254.85714285714286" x2="80" y2="254.85714285714286" stroke="rgb(128, 128, 128)" stroke-opacity="1" stroke-width="1" stroke-linecap="round" stroke-dasharray="undefined"></line>
+                            <line x1="70" y1="249.07142857142858" x2="80" y2="249.07142857142858" stroke="rgb(128, 128, 128)" stroke-opacity="1" stroke-width="1" stroke-linecap="round" stroke-dasharray="undefined"></line>
+                            <line x1="70" y1="243.2857142857143" x2="80" y2="243.2857142857143" stroke="rgb(128, 128, 128)" stroke-opacity="1" stroke-width="1" stroke-linecap="round" stroke-dasharray="undefined"></line>
+                            <line x1="65" y1="237.5" x2="85" y2="237.5" stroke="rgb(0, 0, 0)" stroke-opacity="1" stroke-width="1" stroke-linecap="round" stroke-dasharray="undefined"></line>
+                            <text x="0" y="0" text-anchor="end" dominant-baseline="middle" transform="translate(57,237.5) rotate(0)" font-family="Sans-Serif" font-size="10pt" font-weight="normal" fill="rgb(0, 0, 0)" fill-opacity="1">50˚C</text>
+                            <line x1="70" y1="231.71428571428572" x2="80" y2="231.71428571428572" stroke="rgb(128, 128, 128)" stroke-opacity="1" stroke-width="1" stroke-linecap="round" stroke-dasharray="undefined"></line>
+                            <line x1="70" y1="225.92857142857142" x2="80" y2="225.92857142857142" stroke="rgb(128, 128, 128)" stroke-opacity="1" stroke-width="1" stroke-linecap="round" stroke-dasharray="undefined"></line>
+                            <line x1="70" y1="220.14285714285714" x2="80" y2="220.14285714285714" stroke="rgb(128, 128, 128)" stroke-opacity="1" stroke-width="1" stroke-linecap="round" stroke-dasharray="undefined"></line>
+                            <line x1="70" y1="214.35714285714286" x2="80" y2="214.35714285714286" stroke="rgb(128, 128, 128)" stroke-opacity="1" stroke-width="1" stroke-linecap="round" stroke-dasharray="undefined"></line>
+                            <line x1="65" y1="208.57142857142858" x2="85" y2="208.57142857142858" stroke="rgb(0, 0, 0)" stroke-opacity="1" stroke-width="1" stroke-linecap="round" stroke-dasharray="undefined"></line>
+                            <text x="0" y="0" text-anchor="end" dominant-baseline="middle" transform="translate(57,208.57142857142858) rotate(0)" font-family="Sans-Serif" font-size="10pt" font-weight="normal" fill="rgb(0, 0, 0)" fill-opacity="1">60˚C</text>
+                            <line x1="70" y1="202.7857142857143" x2="80" y2="202.7857142857143" stroke="rgb(128, 128, 128)" stroke-opacity="1" stroke-width="1" stroke-linecap="round" stroke-dasharray="undefined"></line>
+                            <line x1="70" y1="197" x2="80" y2="197" stroke="rgb(128, 128, 128)" stroke-opacity="1" stroke-width="1" stroke-linecap="round" stroke-dasharray="undefined"></line>
+                            <line x1="70" y1="191.21428571428572" x2="80" y2="191.21428571428572" stroke="rgb(128, 128, 128)" stroke-opacity="1" stroke-width="1" stroke-linecap="round" stroke-dasharray="undefined"></line>
+                            <line x1="70" y1="185.42857142857144" x2="80" y2="185.42857142857144" stroke="rgb(128, 128, 128)" stroke-opacity="1" stroke-width="1" stroke-linecap="round" stroke-dasharray="undefined"></line>
+                            <line x1="65" y1="179.64285714285717" x2="85" y2="179.64285714285717" stroke="rgb(0, 0, 0)" stroke-opacity="1" stroke-width="1" stroke-linecap="round" stroke-dasharray="undefined"></line>
+                            <text x="0" y="0" text-anchor="end" dominant-baseline="middle" transform="translate(57,179.64285714285717) rotate(0)" font-family="Sans-Serif" font-size="10pt" font-weight="normal" fill="rgb(0, 0, 0)" fill-opacity="1">70˚C</text>
+                            <line x1="70" y1="173.8571428571429" x2="80" y2="173.8571428571429" stroke="rgb(128, 128, 128)" stroke-opacity="1" stroke-width="1" stroke-linecap="round" stroke-dasharray="undefined"></line>
+                            <line x1="70" y1="168.07142857142858" x2="80" y2="168.07142857142858" stroke="rgb(128, 128, 128)" stroke-opacity="1" stroke-width="1" stroke-linecap="round" stroke-dasharray="undefined"></line>
+                            <line x1="70" y1="162.2857142857143" x2="80" y2="162.2857142857143" stroke="rgb(128, 128, 128)" stroke-opacity="1" stroke-width="1" stroke-linecap="round" stroke-dasharray="undefined"></line>
+                            <line x1="70" y1="156.50000000000003" x2="80" y2="156.50000000000003" stroke="rgb(128, 128, 128)" stroke-opacity="1" stroke-width="1" stroke-linecap="round" stroke-dasharray="undefined"></line>
+                            <line x1="65" y1="150.71428571428572" x2="85" y2="150.71428571428572" stroke="rgb(0, 0, 0)" stroke-opacity="1" stroke-width="1" stroke-linecap="round" stroke-dasharray="undefined"></line>
+                            <text x="0" y="0" text-anchor="end" dominant-baseline="middle" transform="translate(57,150.71428571428572) rotate(0)" font-family="Sans-Serif" font-size="10pt" font-weight="normal" fill="rgb(0, 0, 0)" fill-opacity="1">80˚C</text>
+                            <line x1="70" y1="144.92857142857144" x2="80" y2="144.92857142857144" stroke="rgb(128, 128, 128)" stroke-opacity="1" stroke-width="1" stroke-linecap="round" stroke-dasharray="undefined"></line>
+                            <line x1="70" y1="139.14285714285714" x2="80" y2="139.14285714285714" stroke="rgb(128, 128, 128)" stroke-opacity="1" stroke-width="1" stroke-linecap="round" stroke-dasharray="undefined"></line>
+                            <line x1="70" y1="133.35714285714286" x2="80" y2="133.35714285714286" stroke="rgb(128, 128, 128)" stroke-opacity="1" stroke-width="1" stroke-linecap="round" stroke-dasharray="undefined"></line>
+                            <line x1="70" y1="127.57142857142858" x2="80" y2="127.57142857142858" stroke="rgb(128, 128, 128)" stroke-opacity="1" stroke-width="1" stroke-linecap="round" stroke-dasharray="undefined"></line>
+                            <line x1="65" y1="121.78571428571428" x2="85" y2="121.78571428571428" stroke="rgb(0, 0, 0)" stroke-opacity="1" stroke-width="1" stroke-linecap="round" stroke-dasharray="undefined"></line>
+                            <text x="0" y="0" text-anchor="end" dominant-baseline="middle" transform="translate(57,121.78571428571428) rotate(0)" font-family="Sans-Serif" font-size="10pt" font-weight="normal" fill="rgb(0, 0, 0)" fill-opacity="1">90˚C</text>
+                            <line x1="70" y1="115.99999999999999" x2="80" y2="115.99999999999999" stroke="rgb(128, 128, 128)" stroke-opacity="1" stroke-width="1" stroke-linecap="round" stroke-dasharray="undefined"></line>
+                            <line x1="70" y1="110.21428571428571" x2="80" y2="110.21428571428571" stroke="rgb(128, 128, 128)" stroke-opacity="1" stroke-width="1" stroke-linecap="round" stroke-dasharray="undefined"></line>
+                            <line x1="70" y1="104.42857142857142" x2="80" y2="104.42857142857142" stroke="rgb(128, 128, 128)" stroke-opacity="1" stroke-width="1" stroke-linecap="round" stroke-dasharray="undefined"></line>
+                            <line x1="70" y1="98.64285714285714" x2="80" y2="98.64285714285714" stroke="rgb(128, 128, 128)" stroke-opacity="1" stroke-width="1" stroke-linecap="round" stroke-dasharray="undefined"></line>
+                            <line x1="65" y1="92.85714285714289" x2="85" y2="92.85714285714289" stroke="rgb(0, 0, 0)" stroke-opacity="1" stroke-width="1" stroke-linecap="round" stroke-dasharray="undefined"></line>
+                            <text x="0" y="0" text-anchor="end" dominant-baseline="middle" transform="translate(57,92.85714285714289) rotate(0)" font-family="Sans-Serif" font-size="10pt" font-weight="normal" fill="rgb(0, 0, 0)" fill-opacity="1">100˚C</text>
+                            <line x1="70" y1="87.0714285714286" x2="80" y2="87.0714285714286" stroke="rgb(128, 128, 128)" stroke-opacity="1" stroke-width="1" stroke-linecap="round" stroke-dasharray="undefined"></line>
+                            <line x1="70" y1="81.28571428571432" x2="80" y2="81.28571428571432" stroke="rgb(128, 128, 128)" stroke-opacity="1" stroke-width="1" stroke-linecap="round" stroke-dasharray="undefined"></line>
+                            <line x1="70" y1="75.50000000000003" x2="80" y2="75.50000000000003" stroke="rgb(128, 128, 128)" stroke-opacity="1" stroke-width="1" stroke-linecap="round" stroke-dasharray="undefined"></line>
+                            <line x1="70" y1="69.71428571428575" x2="80" y2="69.71428571428575" stroke="rgb(128, 128, 128)" stroke-opacity="1" stroke-width="1" stroke-linecap="round" stroke-dasharray="undefined"></line>
+                            <line x1="65" y1="63.928571428571445" x2="85" y2="63.928571428571445" stroke="rgb(0, 0, 0)" stroke-opacity="1" stroke-width="1" stroke-linecap="round" stroke-dasharray="undefined"></line>
+                            <text x="0" y="0" text-anchor="end" dominant-baseline="middle" transform="translate(57,63.928571428571445) rotate(0)" font-family="Sans-Serif" font-size="10pt" font-weight="normal" fill="rgb(0, 0, 0)" fill-opacity="1">110˚C</text>
+                            <line x1="70" y1="58.14285714285716" x2="80" y2="58.14285714285716" stroke="rgb(128, 128, 128)" stroke-opacity="1" stroke-width="1" stroke-linecap="round" stroke-dasharray="undefined"></line>
+                            <line x1="70" y1="52.357142857142875" x2="80" y2="52.357142857142875" stroke="rgb(128, 128, 128)" stroke-opacity="1" stroke-width="1" stroke-linecap="round" stroke-dasharray="undefined"></line>
+                            <line x1="70" y1="46.571428571428584" x2="80" y2="46.571428571428584" stroke="rgb(128, 128, 128)" stroke-opacity="1" stroke-width="1" stroke-linecap="round" stroke-dasharray="undefined"></line>
+                            <line x1="70" y1="40.785714285714306" x2="80" y2="40.785714285714306" stroke="rgb(128, 128, 128)" stroke-opacity="1" stroke-width="1" stroke-linecap="round" stroke-dasharray="undefined"></line>
+                            <line x1="65" y1="35" x2="85" y2="35" stroke="rgb(0, 0, 0)" stroke-opacity="1" stroke-width="1" stroke-linecap="round" stroke-dasharray="undefined"></line>
+                            <text x="0" y="0" text-anchor="end" dominant-baseline="middle" transform="translate(57,35) rotate(0)" font-family="Sans-Serif" font-size="10pt" font-weight="normal" fill="rgb(0, 0, 0)" fill-opacity="1">120˚C</text>
+                            <circle id="circle" cx="75" cy="467.5" r="16" fill="rgb(255, 0, 0)" fill-opacity="1"></circle>
+                            <path id="mercury" d="M69 460 L80.99999999999999 460 L81 382.14285714285717 L69 382.14285714285717 L69 460 Z" fill="rgb(255, 0, 0)" fill-opacity="1"></path>
+                        </svg>
+                    </div>
+                    <div>
+                        <div>
+                            <button data-unit="celsius" class="temp-btn" id="celsius-btn">˚C</button>
+                            <button data-unit="fahrenheit" class="temp-btn" id="fahrenheit-btn">˚F</button>
+                            <button data-unit="kelvin" class="temp-btn" id="kelvin-btn">K</button>
+                        </div>
+                        <div class="input-group" style="width: 320px">
+                            <button data-op="minus" class="arith-btn" id="minus-btn">–</button>
+                            <input autofocus class="input" id="thermometer-input" type="number" placeholder="Temperature">
+                            
+                            <span id="unit">˚C</span>
+                            
+                            <button data-op="plus" class="arith-btn" id="plus-btn">+</button>
+                        </div>
+                    </div>
                 </div>
-                <div class="input-group" style="width: 320px">
-                    <button data-op="minus" class="arith-btn" id="minus-btn">–</button>
-                    <input autofocus class="input" id="thermometer-input" type="number" placeholder="Temperature">
-                    
-                    <span id="unit">˚C</span>
-                    
-                    <button data-op="plus" class="arith-btn" id="plus-btn">+</button>
+                <div>
+                    <div>
+                        <h3>Celsius: <span id="celsius"></span></h3>
+                        <h3>Fahrenheit: <span id="fahrenheit"></span></h3>
+                        <h3>Kelvin: <span id="kelvin"></span></h3>
+                    </div>
+                    <div id="description-container">
+                        <h3 id="description"></h3>
+                        <img id="image"/>
+                    </div>
+                    <div id="fun_fact">
+                    </div>
                 </div>
             </div>
-            <div>
-                <div>
-                    <h3>Celsius: <span id="celsius"></span></h3>
-                    <h3>Fahrenheit: <span id="fahrenheit"></span></h3>
-                    <h3>Kelvin: <span id="kelvin"></span></h3>
-                </div>
-                <div id="description-container">
-                    <h3 id="description"></h3>
-                    <img id="image"/>
-                </div>
-                <div id="fun_fact">
-                </div>
-            </div>
-        </div>
-            
+                
             <!-- <div class="video-container">
                 <h2> For documentation purposes only </h2>
                 <video width="896" height="504" controls>
@@ -164,104 +176,103 @@
                 </video>
                 <h5>Local student creates a thermometer with absolute zero (ba dum tss) help from AI and almost dies for it (21st Century)</h5>
             </div> -->
+        
+            <div id="lesson">
     
-        </div>
-        <div id="lesson">
-
-            <h1>Key Reference Points</h1>
-            <h4>
-                <ul>
-                    <li>Absolute zero: \(0\,\text{K} = -273.15\,^\circ\text{C} = -459.67\,^\circ\text{F}\)</li>
-                    <li>Water freezes: \(273.15\,\text{K} = 0\,^\circ\text{C} = 32\,^\circ\text{F}\)</li>
-                    <li>Water boils (at 1 atm): \(373.15\,\text{K} = 100\,^\circ\text{C} = 212\,^\circ\text{F}\)</li>
-                </ul>
-            </h4>
-
-            <h1>Conversion Formulas</h1>
-            <h4>
-                <ul style="list-style-type: none">
-                    <li>
+                <h1>Key Reference Points</h1>
+                <h4>
+                    <ul>
+                        <li>Absolute zero: \(0\,\text{K} = -273.15\,^\circ\text{C} = -459.67\,^\circ\text{F}\)</li>
+                        <li>Water freezes: \(273.15\,\text{K} = 0\,^\circ\text{C} = 32\,^\circ\text{F}\)</li>
+                        <li>Water boils (at 1 atm): \(373.15\,\text{K} = 100\,^\circ\text{C} = 212\,^\circ\text{F}\)</li>
+                    </ul>
+                </h4>
     
-                        <strong>Celsius → Fahrenheit</strong>:
+                <h1>Conversion Formulas</h1>
+                <h4>
+                    <ul style="list-style-type: none">
+                        <li>
+        
+                            <strong>Celsius → Fahrenheit</strong>:
+                            \[
+                                ^\circ\text{F} = \frac{9}{5}\,^\circ\text{C} + 32
+                            \]
+                        </li>
+                        </li>
+        
+                        <strong>Fahrenheit → Celsius</strong>:
                         \[
-                            ^\circ\text{F} = \frac{9}{5}\,^\circ\text{C} + 32
+                            ^\circ\text{C} = \frac{5}{9}\,\bigl( ^\circ\text{F} - 32 \bigr)
                         \]
-                    </li>
-                    </li>
+                        </li>
+                        <li>
+                        <strong>Celsius → Kelvin</strong>:
+                        \[
+                            \text{K = } ^\circ\text{C} + 273.15
+                        \]
+                        </li>
+                        <li>
+                        <strong>Kelvin → Celsius</strong>:
+                        \[
+                            ^\circ\text{C} = \text{K} - 273.15
+                        \]
+                        </li>
+                        <li>
+                        <strong>Fahrenheit → Kelvin</strong>:
+                        \[
+                            \text{K} = \frac{5}{9}\,\bigl( ^\circ\text{F} - 32 \bigr) + 273.15
+                        \]
+                        </li>
+                        <li>
+                        <strong>Kelvin → Fahrenheit</strong>:
+                        \[
+                            ^\circ\text{F} = \frac{9}{5}\,(\text{K} - 273.15) + 32
+                        \]
+                        </li>
+                    </ul>
+                </h4>
     
-                    <strong>Fahrenheit → Celsius</strong>:
-                    \[
-                        ^\circ\text{C} = \frac{5}{9}\,\bigl( ^\circ\text{F} - 32 \bigr)
-                    \]
-                    </li>
-                    <li>
-                    <strong>Celsius → Kelvin</strong>:
-                    \[
-                        \text{K = } ^\circ\text{C} + 273.15
-                    \]
-                    </li>
-                    <li>
-                    <strong>Kelvin → Celsius</strong>:
-                    \[
-                        ^\circ\text{C} = \text{K} - 273.15
-                    \]
-                    </li>
-                    <li>
-                    <strong>Fahrenheit → Kelvin</strong>:
-                    \[
-                        \text{K} = \frac{5}{9}\,\bigl( ^\circ\text{F} - 32 \bigr) + 273.15
-                    \]
-                    </li>
-                    <li>
-                    <strong>Kelvin → Fahrenheit</strong>:
-                    \[
-                        ^\circ\text{F} = \frac{9}{5}\,(\text{K} - 273.15) + 32
-                    \]
-                    </li>
-                </ul>
-            </h4>
-
-
-            <h1>Quick Examples</h1>
-            <h4>
-                <details open>
-                    <summary><strong>Example 1:</strong> Convert \(25\,^\circ\text{C}\) to °F and K</summary>
-                    <h4>
-                    \[
-                        ^\circ\text{F} = \frac{9}{5}\cdot 25 + 32 = 77^\circ\text{F}
-                        \quad\text{and}\quad
-                        \text{K} = 25 + 273.15 = 298.15\,\text{K}
-                    \]
-                    </h4>
-                </details>
-                <details>
-                    <summary><strong>Example 2:</strong> Convert \(68\,^\circ\text{F}\) to °C</summary>
-                    <h4>
-                    \[
-                        ^\circ\text{C} = \frac{5}{9}\,(68 - 32) = \frac{5}{9}\cdot 36 = 20^\circ\text{C}
-                    \]
-                    </h4>
-                </details>
-                <details>
-                    <summary><strong>Example 3:</strong> Convert \(300\,\text{K}\) to °C and °F</summary>
-                    <h4>
-                    \[
-                        ^\circ\text{C} = 300 - 273.15 = 26.85^\circ\text{C},\quad
-                        ^\circ\text{F} = \frac{9}{5}\cdot 26.85 + 32 \approx 80.33^\circ\text{F}
-                    \]
-                    </h4>
-                </details>
-            </h4>
-
-            <h1>Footnote</h1>
-            <h4>
-                <ul>
-                    <li>Kelvin never uses the degree symbol (write K not ˚K).</li>
-                    <li>For real-world values, round to sensible precision (e.g., one or two decimals).</li>
-                    <li>Negative temperatures are valid in °C and °F, but not in Kelvin.</li>
-                </ul>
-
-            </h4>
+                <h1>Quick Examples</h1>
+                <h4>
+                    <details open>
+                        <summary><strong>Example 1:</strong> Convert \(25\,^\circ\text{C}\) to °F and K</summary>
+                        <h4>
+                        \[
+                            ^\circ\text{F} = \frac{9}{5}\cdot 25 + 32 = 77^\circ\text{F}
+                            \quad\text{and}\quad
+                            \text{K} = 25 + 273.15 = 298.15\,\text{K}
+                        \]
+                        </h4>
+                    </details>
+                    <details>
+                        <summary><strong>Example 2:</strong> Convert \(68\,^\circ\text{F}\) to °C</summary>
+                        <h4>
+                        \[
+                            ^\circ\text{C} = \frac{5}{9}\,(68 - 32) = \frac{5}{9}\cdot 36 = 20^\circ\text{C}
+                        \]
+                        </h4>
+                    </details>
+                    <details>
+                        <summary><strong>Example 3:</strong> Convert \(300\,\text{K}\) to °C and °F</summary>
+                        <h4>
+                        \[
+                            ^\circ\text{C} = 300 - 273.15 = 26.85^\circ\text{C},\quad
+                            ^\circ\text{F} = \frac{9}{5}\cdot 26.85 + 32 \approx 80.33^\circ\text{F}
+                        \]
+                        </h4>
+                    </details>
+                </h4>
+    
+                <h1>Footnote</h1>
+                <h4>
+                    <ul>
+                        <li>Kelvin never uses the degree symbol (write K not ˚K).</li>
+                        <li>For real-world values, round to sensible precision (e.g., one or two decimals).</li>
+                        <li>Negative temperatures are valid in °C and °F, but not in Kelvin.</li>
+                    </ul>
+    
+                </h4>
+            </div>
         </div>
     </body>
 </html>

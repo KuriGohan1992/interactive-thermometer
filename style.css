@@ -1,10 +1,12 @@
 :root {
     --theme: #25afff;
+    --theme-darker: color-mix(in srgb, var(--theme) 90%, black);
+    --sidebar-width: 300px;
 }
 
 h3 {
     margin: 4px;
-    
+
 }
 
 h4 {
@@ -30,8 +32,13 @@ h5 {
 button {
     outline: none;
     border: 0px;
+    transition: background-color 0.5s ease-out;
     background-color: var(--theme);
     color: white;   
+}
+
+button:hover {
+    scale: 1.05;
 }
 
 .temp-btn {
@@ -66,13 +73,49 @@ button {
     height: 30px;
     width: 425px;
     rotate: 270deg;
-    opacity: 0;
+    opacity: 1;
 }
 
 .video-container {
     margin-top: 20px;
     width: 896px;
     height: 504px;
+}
+
+#sidebar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: var(--sidebar-width);
+    height: 100%;
+    transition: background-color 0.5s ease-out;
+    background-color: var(--theme);
+    color: white;
+}
+
+a {
+    color: white;
+    text-decoration: none;
+}
+
+#sidebar ul {
+    margin: 0px;
+    padding: 0px;
+    list-style: none;
+}
+
+#sidebar ul li {
+    padding: 30px 0 30px 30px;
+    font-size: 20px;
+}
+
+#sidebar ul li:hover {
+    background-color: var(--theme-darker);
+}
+
+#main-content {
+    margin-left: var(--sidebar-width);
+    padding-left: 20px;
 }
 
 #circle, #mercury {
@@ -84,10 +127,10 @@ button {
 
 
 #image {
-    width: 320px;
-    height: 240px;
+    width: 360px;
+    height: 270px;
     object-fit: cover;
-    border-radius: 12px;
+    border-radius: 8px;
 
 }
 
