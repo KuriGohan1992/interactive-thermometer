@@ -4,9 +4,13 @@
     --sidebar-width: 300px;
 }
 
-h3 {
-    margin: 4px;
+h1 {
+    font-size: 28px;
+}
 
+h3 {
+    margin: 8px 0 8px 0;
+    font-size: 22px;
 }
 
 h4 {
@@ -17,9 +21,9 @@ h4 {
 
 h5 {
     margin: 0px;
-    font-size: 16px;
+    font-size: 18px;
     font-weight: 200;
-    font-style: italic
+    /* font-style: italic; */
 }
 
 .arith-btn {
@@ -29,16 +33,20 @@ h5 {
     font-size: 16px;
 }
 
+input {
+    padding: 8px;
+}
+
 button {
     outline: none;
     border: 0px;
-    transition: background-color 0.5s ease-out;
+    transition: background-color 0.2s ease-out;
     background-color: var(--theme);
     color: white;   
 }
 
 button:hover {
-    scale: 1.05;
+    background-color: var(--theme-darker);
 }
 
 .temp-btn {
@@ -53,6 +61,7 @@ button:hover {
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: center;
+    align-items: center;
 }
 
 .thermometer-container {
@@ -73,7 +82,7 @@ button:hover {
     height: 30px;
     width: 425px;
     rotate: 270deg;
-    opacity: 1;
+    opacity: 0;
 }
 
 .video-container {
@@ -116,6 +125,7 @@ a {
 #main-content {
     margin-left: var(--sidebar-width);
     padding-left: 20px;
+    margin-bottom: 30px;
 }
 
 #circle, #mercury {
@@ -127,28 +137,58 @@ a {
 
 
 #image {
-    width: 360px;
-    height: 270px;
+    width: 400px;
+    height: 300px;
     object-fit: cover;
     border-radius: 8px;
 
 }
 
 #fun_fact {
-    width: 320px;
+    width: 360px;
     flex-wrap: wrap;
 }
 
 #thermometer-input {
+    width: 100px;
+    height: 16px;
     font-size: 16px;
 }
 
+#formula-list {
+    list-style: none;
+    display: grid;
+    grid-template-columns: repeat(2, minmax(260px, 1fr));
+    gap: 1rem;
+    max-width: 100%;
+}
+
+#cfk {
+    position: relative;
+    left: 22px;
+    margin-bottom: 8px;
+}
+
+.input-group {
+    display: flex;
+    align-items: center;
+    width: 320px;
+    position: relative;
+    left: 108px;
+}
+
+.input-field-with-span {
+    width: 140px;
+    margin-left: 12px;
+    margin-right: 12px;
+}
 
 
-
-
-
-
+#description-stuff {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;  /* controls vertical spacing between children */
+}
 
 /* Chrome, Safari, Edge, Opera */
 input::-webkit-outer-spin-button,

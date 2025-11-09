@@ -16,8 +16,8 @@
             <ul style="list-style: none;">
                 <li>Temperature and Heat</li>
                 <a href="https://jade-notauserdotcom.github.io/InHeatTransfer/index.html"><li>Heat Transfer Demonstration</li></a>
-                <a href="https://super-kriztan.github.io/Conversion-Quiz/"><li>Quiz: Temperature and Heat</li>
-                <a href="https://ronald2117.github.io/calphy-website/"><li>Main Menu</li></a>
+                <a href="https://super-kriztan.github.io/Conversion-Quiz/"><li>Quiz: Test Your Knowledge</li>
+                <a href="https://ronald2117.github.io/calphy-website/"><li>Back to Homepage</li></a>
             </ul>
         </div>
         <div id="main-content">
@@ -39,7 +39,7 @@
                 </h4>  
             </div>
             <div class="content">
-                <div>
+                <div style="text-align: center;">
                     <div class="thermometer-container">
                         <input class="slider" id="thermometer-slider" type="range" min="-20" max="120" step="0.01" value="0">
                         <?xml version="1.0" encoding="UTF-8" ?><svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="150" height="500">	<path d="M-7.105427357601002e-14 500 L150 500 L150 -2.842170943040401e-14 L-1.4210854715202004e-14 -2.842170943040401e-14 L-7.105427357601002e-14 500 Z" stroke="rgb(255, 255, 255)" stroke-opacity="1" stroke-width="1" stroke-linecap="square" fill="rgb(255, 255, 255)" fill-opacity="1"></path>
@@ -138,32 +138,35 @@
                         </svg>
                     </div>
                     <div>
-                        <div>
+                        <div id="cfk">
                             <button data-unit="celsius" class="temp-btn" id="celsius-btn">˚C</button>
                             <button data-unit="fahrenheit" class="temp-btn" id="fahrenheit-btn">˚F</button>
                             <button data-unit="kelvin" class="temp-btn" id="kelvin-btn">K</button>
                         </div>
-                        <div class="input-group" style="width: 320px">
+                        <div class="input-group">
                             <button data-op="minus" class="arith-btn" id="minus-btn">–</button>
-                            <input autofocus class="input" id="thermometer-input" type="number" placeholder="Temperature">
+                            <div class="input-field-with-span">
+                                <input autofocus class="input" id="thermometer-input" type="number" placeholder="Temperature">
+                                <span id="unit">˚C</span>
+                            </div>
                             
-                            <span id="unit">˚C</span>
                             
                             <button data-op="plus" class="arith-btn" id="plus-btn">+</button>
                         </div>
                     </div>
                 </div>
-                <div>
+                <div id="description-stuff">
                     <div>
                         <h3>Celsius: <span id="celsius"></span></h3>
                         <h3>Fahrenheit: <span id="fahrenheit"></span></h3>
                         <h3>Kelvin: <span id="kelvin"></span></h3>
                     </div>
-                    <div id="description-container">
-                        <h3 id="description"></h3>
-                        <img id="image"/>
-                    </div>
-                    <div id="fun_fact">
+                    <div>
+                        <div id="description-container">
+                            <h3 id="description"></h3>
+                            <img id="image"/>
+                        </div>
+                        <div id="fun_fact"></div>
                     </div>
                 </div>
             </div>
@@ -189,49 +192,54 @@
                 </h4>
     
                 <h1>Conversion Formulas</h1>
-                <h4>
-                    <ul style="list-style-type: none">
-                        <li>
+                <div>
+                    <h4>
+                        <ul id="formula-list">
+                            <li>            
+                                <strong>Celsius → Fahrenheit</strong>:
+                                \[
+                                    ^\circ\text{F} = \frac{9}{5}\,^\circ\text{C} + 32
+                                \]
+                            </li>
+
+                            <li>            
+                                <strong>Fahrenheit → Celsius</strong>:
+                                \[
+                                    ^\circ\text{C} = \frac{5}{9}\,\bigl( ^\circ\text{F} - 32 \bigr)
+                                \]
+                            </li>
+
+                            <li>
+                                <strong>Celsius → Kelvin</strong>:
+                                \[
+                                    \text{K = } ^\circ\text{C} + 273.15
+                                \]
+                            </li>
+
+                            <li>
+                                <strong>Kelvin → Celsius</strong>:
+                                \[
+                                    ^\circ\text{C} = \text{K} - 273.15
+                                \]
+                            </li>
+
+                            <li>
+                                <strong>Fahrenheit → Kelvin</strong>:
+                                \[
+                                    \text{K} = \frac{5}{9}\,\bigl( ^\circ\text{F} - 32 \bigr) + 273.15
+                                \]
+                            </li>
+
+                            <li>
+                                <strong>Kelvin → Fahrenheit</strong>:
+                                \[
+                                    ^\circ\text{F} = \frac{9}{5}\,(\text{K} - 273.15) + 32
+                                \]
+                            </li>
+                        </ul>
+                    </h4>
         
-                            <strong>Celsius → Fahrenheit</strong>:
-                            \[
-                                ^\circ\text{F} = \frac{9}{5}\,^\circ\text{C} + 32
-                            \]
-                        </li>
-                        </li>
-        
-                        <strong>Fahrenheit → Celsius</strong>:
-                        \[
-                            ^\circ\text{C} = \frac{5}{9}\,\bigl( ^\circ\text{F} - 32 \bigr)
-                        \]
-                        </li>
-                        <li>
-                        <strong>Celsius → Kelvin</strong>:
-                        \[
-                            \text{K = } ^\circ\text{C} + 273.15
-                        \]
-                        </li>
-                        <li>
-                        <strong>Kelvin → Celsius</strong>:
-                        \[
-                            ^\circ\text{C} = \text{K} - 273.15
-                        \]
-                        </li>
-                        <li>
-                        <strong>Fahrenheit → Kelvin</strong>:
-                        \[
-                            \text{K} = \frac{5}{9}\,\bigl( ^\circ\text{F} - 32 \bigr) + 273.15
-                        \]
-                        </li>
-                        <li>
-                        <strong>Kelvin → Fahrenheit</strong>:
-                        \[
-                            ^\circ\text{F} = \frac{9}{5}\,(\text{K} - 273.15) + 32
-                        \]
-                        </li>
-                    </ul>
-                </h4>
-    
+                </div>
                 <h1>Quick Examples</h1>
                 <h4>
                     <details open>
