@@ -1,3 +1,46 @@
+:root {
+    --theme: #25afff;
+}
+
+h3 {
+    margin: 4px;
+    
+}
+
+h4 {
+    margin: 4px;
+    font-size: 20px;
+    font-weight: 200;
+}
+
+h5 {
+    margin: 0px;
+    font-size: 16px;
+    font-weight: 200;
+    font-style: italic
+}
+
+.arith-btn {
+    height: 2rem;
+    width: 2rem;
+    border-radius: 8px;
+    font-size: 16px;
+}
+
+button {
+    outline: none;
+    border: 0px;
+    background-color: var(--theme);
+    color: white;   
+}
+
+.temp-btn {
+    font-size: 16px;
+    height: 2rem;
+    width: 2rem;
+    border-radius: 8px;
+}
+
 .content {
     display: flex;
     flex-direction: row;
@@ -7,7 +50,7 @@
 
 .thermometer-container {
     height: 500px;
-    width: 500px;
+    width: 400px;
     display: grid;
     grid-template-areas: "thermometer-container";
     place-items:center;
@@ -34,25 +77,28 @@
 
 #circle, #mercury {
     /* transition: stroke 0.5s ease-out; */
+    fill: var(--theme);
     transition: fill 0.5s ease-out;
 }
 
-#thermometer-input {
-    width: 8rem;
-}
+
 
 #image {
-    width: 400px;
-    height: 300px;
+    width: 320px;
+    height: 240px;
     object-fit: cover;
+    border-radius: 12px;
+
 }
 
 #fun_fact {
-    width: 400px;
+    width: 320px;
     flex-wrap: wrap;
 }
 
-
+#thermometer-input {
+    font-size: 16px;
+}
 
 
 

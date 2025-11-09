@@ -62,7 +62,7 @@ function show_conversions(temperature=0) {
     }
 
     
-    const unit = inputField.getAttribute('placeholder');
+    const unit = document.getElementById('unit').innerText;
     changeThermometer(unit);
     let celsius;
 
@@ -91,7 +91,7 @@ function show_conversions(temperature=0) {
     }
 
     if (celsius <= -273) {
-        show_fun_fact('Scientists can get very, very close to absolute zero (-273.15˚C), but they can never actually reach it.');
+        show_fun_fact('We can get very, very close to absolute zero (-273.15˚C), but we can never actually reach it.');
     } else if (celsius < -250) {
         show_fun_fact('If you are exposed to this temperature even if it is just for a thousandth of a second, your whole body would freeze.');
     } else if (celsius < -230) {
@@ -230,51 +230,51 @@ function show_conversions(temperature=0) {
         show_description('Big Bang', 'descriptive_images/big_bang.jpg');
     }
 
-    const circle = document.getElementById('circle');
+    const root = document.querySelector(':root')
 
     if (celsius < -1000) {
-        mercury.style.fill = circle.style.fill = '#00047e';
+        root.style.setProperty('--theme', '#00047e');
     } else if (celsius < -273.15) {
-        mercury.style.fill = circle.style.fill = '#0038b9';
+        root.style.setProperty('--theme', '#0038b9');
     } else if (celsius < -200) {
-        mercury.style.fill = circle.style.fill = '#256fff';
+        root.style.setProperty('--theme', '#256fff');
     } else if (celsius < -150) {
-        mercury.style.fill = circle.style.fill = '#257fff';
+        root.style.setProperty('--theme', '#257fff');
     } else if (celsius < -100) {
-        mercury.style.fill = circle.style.fill = '#258fff';
+        root.style.setProperty('--theme', '#258fff');
     } else if (celsius < -15) {
-        mercury.style.fill = circle.style.fill = '#259fff';
+        root.style.setProperty('--theme', '#259fff');
     } else if (celsius < 4) {
-        mercury.style.fill = circle.style.fill = '#25afff';
+        root.style.setProperty('--theme', '#25afff');
     } else if (celsius < 10) {
-        mercury.style.fill = circle.style.fill = '#f2b3b9';
+        root.style.setProperty('--theme', '#f2b3b9');
     } else if (celsius < 15) {
-        mercury.style.fill = circle.style.fill = '#ed99a2';
+        root.style.setProperty('--theme', '#ed99a2');
     } else if (celsius < 23) {
-        mercury.style.fill = circle.style.fill = '#e9808b';
+        root.style.setProperty('--theme', '#e9808b');
     } else if (celsius < 35) {
-        mercury.style.fill = circle.style.fill = '#e46774';
+        root.style.setProperty('--theme', '#e46774');
     } else if (celsius < 50) {
-        mercury.style.fill = circle.style.fill = '#e04d5d';
+        root.style.setProperty('--theme', '#e04d5d');
     } else if (celsius < 80) {
-        mercury.style.fill = circle.style.fill = '#db3445';
+        root.style.setProperty('--theme', '#db3445');
     } else if (celsius < 120) {
-        mercury.style.fill = circle.style.fill = '#d71a2e';
+        root.style.setProperty('--theme', '#d71a2e');
     } else if (celsius < 1000) {
-        mercury.style.fill = circle.style.fill = '#a41726';
+        root.style.setProperty('--theme', '#a41726');
     } else if (celsius < 5000) {
-        mercury.style.fill = circle.style.fill = '#900a22';
+        root.style.setProperty('--theme', '#900a22');
     } else if (celsius < 16000000){
-        mercury.style.fill = circle.style.fill = '#810020';
+        root.style.setProperty('--theme', '#810020');
     } else {
-        mercury.style.fill = circle.style.fill = '#000000';
+        root.style.setProperty('--theme', '#000000');
     }    
     
 }
 
 function show_fun_fact(fact) {
     const fun_fact = document.getElementById('fun_fact');
-    fun_fact.innerHTML = `Fun Fact: ${fact}`;
+    fun_fact.innerHTML = `<h5>Fun Fact: ${fact}</h5>`;
 }
 
 function show_description(adjective, img_path) {
@@ -308,7 +308,7 @@ document.addEventListener('DOMContentLoaded', () => {
     [...document.getElementsByClassName('temp-btn')].forEach(button => {
     // document.querySelectorAll('.temp-btn').forEach(button => {
         button.addEventListener('click', () => {
-            document.getElementById('thermometer-input').setAttribute('placeholder', button.innerText);
+            document.getElementById('unit').innerText = button.innerText;
             show_conversions(inputField.value);
         });
     });
@@ -331,6 +331,8 @@ document.addEventListener('DOMContentLoaded', () => {
             }
             show_conversions(inputField.value);
         })
+
+
 
 
 

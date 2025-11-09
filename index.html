@@ -3,11 +3,31 @@
     <head>
         <title>Thermometer</title>
         <link rel="stylesheet" href="style.css">
-        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css">
+        
         
         <script src="script.js"></script>
+
+        <script>window.MathJax = { tex: { inlineMath: [['\\(','\\)'], ['$', '$']] } };</script>
+        <script async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     </head>
     <body>
+        <div>
+            <h1>What is Temperature?</h1>
+            <h4>Temperature measures how hot or cold something is. It tells us how fast the particles inside a substance are moving, the hotter it is, the faster they move. Every temperature scale measures the same thing, but uses different starting points and unit sizes.</h4>
+            <h1>
+                The Interactive Thermometer
+            </h1>
+            <h4>This interactive thermometer lets you visualize temperature changes in real time. Adjust the values, switch units, and see how different temperature affects the world around us.</h4>
+            <h4>How to adjust the values:
+                <ul>
+                    <li>Click the thermometer at the level you want to set it to</li>
+                    <li>Drag the "mercury" inside the thermometer</li>
+                    <li>Press the up/down arrow keys to increase/decrease the value</li>
+                    <li>Manually input a value by typing it on the input field</li>
+                    <li>Click the +/– buttons beside the input field</li>
+                </ul>
+            </h4>  
+        </div>
         <div class="content">
             <div class="thermometer-container">
                 <input class="slider" id="thermometer-slider" type="range" min="-20" max="120" step="0.01" value="0">
@@ -106,29 +126,35 @@
                     <path id="mercury" d="M69 460 L80.99999999999999 460 L81 382.14285714285717 L69 382.14285714285717 L69 460 Z" fill="rgb(255, 0, 0)" fill-opacity="1"></path>
                 </svg>
             </div>
-            
+            <div>
+                <div>
+                    <button data-unit="celsius" class="temp-btn" id="celsius-btn">˚C</button>
+                    <button data-unit="fahrenheit" class="temp-btn" id="fahrenheit-btn">˚F</button>
+                    <button data-unit="kelvin" class="temp-btn" id="kelvin-btn">K</button>
+                </div>
+                <div class="input-group" style="width: 320px">
+                    <button data-op="minus" class="arith-btn" id="minus-btn">–</button>
+                    <input autofocus class="input" id="thermometer-input" type="number" placeholder="Temperature">
+                    
+                    <span id="unit">˚C</span>
+                    
+                    <button data-op="plus" class="arith-btn" id="plus-btn">+</button>
+                </div>
+            </div>
             <div>
                 <div>
                     <h3>Celsius: <span id="celsius"></span></h3>
                     <h3>Fahrenheit: <span id="fahrenheit"></span></h3>
                     <h3>Kelvin: <span id="kelvin"></span></h3>
-                    <div>
-                        <button data-op="minus" class="arith-btn" id="minus-btn">–</button>
-                        <input class="input" id="thermometer-input" type="number" placeholder="˚C">
-                        <button data-op="plus" class="arith-btn" id="plus-btn">+</button>
-                    </div>
-                    <button data-unit="celsius" class="temp-btn" id="celsius-btn">˚C</button>
-                    <button data-unit="fahrenheit" class="temp-btn" id="fahrenheit-btn">˚F</button>
-                    <button data-unit="kelvin" class="temp-btn" id="kelvin-btn">K</button>
                 </div>
-                <div>
-                    <div id="description-container">
-                        <h3 id="description"></h3>
-                        <img id="image"/>
-                    </div>
-                    <div id="fun_fact"></div>
+                <div id="description-container">
+                    <h3 id="description"></h3>
+                    <img id="image"/>
+                </div>
+                <div id="fun_fact">
                 </div>
             </div>
+        </div>
             
             <!-- <div class="video-container">
                 <h2> For documentation purposes only </h2>
@@ -136,9 +162,106 @@
                     <source src="Thermometer.mp4" type="video/mp4">
                     oof gg not supported ng browser mo yung video format erp
                 </video>
-                <h3>Local student creates a thermometer with absolute zero (ba dum tss) help from AI and almost dies for it (21st Century)</h3>
+                <h5>Local student creates a thermometer with absolute zero (ba dum tss) help from AI and almost dies for it (21st Century)</h5>
             </div> -->
     
+        </div>
+        <div id="lesson">
+
+            <h1>Key Reference Points</h1>
+            <h4>
+                <ul>
+                    <li>Absolute zero: \(0\,\text{K} = -273.15\,^\circ\text{C} = -459.67\,^\circ\text{F}\)</li>
+                    <li>Water freezes: \(273.15\,\text{K} = 0\,^\circ\text{C} = 32\,^\circ\text{F}\)</li>
+                    <li>Water boils (at 1 atm): \(373.15\,\text{K} = 100\,^\circ\text{C} = 212\,^\circ\text{F}\)</li>
+                </ul>
+            </h4>
+
+            <h1>Conversion Formulas</h1>
+            <h4>
+                <ul style="list-style-type: none">
+                    <li>
+    
+                        <strong>Celsius → Fahrenheit</strong>:
+                        \[
+                            ^\circ\text{F} = \frac{9}{5}\,^\circ\text{C} + 32
+                        \]
+                    </li>
+                    </li>
+    
+                    <strong>Fahrenheit → Celsius</strong>:
+                    \[
+                        ^\circ\text{C} = \frac{5}{9}\,\bigl( ^\circ\text{F} - 32 \bigr)
+                    \]
+                    </li>
+                    <li>
+                    <strong>Celsius → Kelvin</strong>:
+                    \[
+                        \text{K = } ^\circ\text{C} + 273.15
+                    \]
+                    </li>
+                    <li>
+                    <strong>Kelvin → Celsius</strong>:
+                    \[
+                        ^\circ\text{C} = \text{K} - 273.15
+                    \]
+                    </li>
+                    <li>
+                    <strong>Fahrenheit → Kelvin</strong>:
+                    \[
+                        \text{K} = \frac{5}{9}\,\bigl( ^\circ\text{F} - 32 \bigr) + 273.15
+                    \]
+                    </li>
+                    <li>
+                    <strong>Kelvin → Fahrenheit</strong>:
+                    \[
+                        ^\circ\text{F} = \frac{9}{5}\,(\text{K} - 273.15) + 32
+                    \]
+                    </li>
+                </ul>
+            </h4>
+
+
+            <h1>Quick Examples</h1>
+            <h4>
+                <details open>
+                    <summary><strong>Example 1:</strong> Convert \(25\,^\circ\text{C}\) to °F and K</summary>
+                    <h4>
+                    \[
+                        ^\circ\text{F} = \frac{9}{5}\cdot 25 + 32 = 77^\circ\text{F}
+                        \quad\text{and}\quad
+                        \text{K} = 25 + 273.15 = 298.15\,\text{K}
+                    \]
+                    </h4>
+                </details>
+                <details>
+                    <summary><strong>Example 2:</strong> Convert \(68\,^\circ\text{F}\) to °C</summary>
+                    <h4>
+                    \[
+                        ^\circ\text{C} = \frac{5}{9}\,(68 - 32) = \frac{5}{9}\cdot 36 = 20^\circ\text{C}
+                    \]
+                    </h4>
+                </details>
+                <details>
+                    <summary><strong>Example 3:</strong> Convert \(300\,\text{K}\) to °C and °F</summary>
+                    <h4>
+                    \[
+                        ^\circ\text{C} = 300 - 273.15 = 26.85^\circ\text{C},\quad
+                        ^\circ\text{F} = \frac{9}{5}\cdot 26.85 + 32 \approx 80.33^\circ\text{F}
+                    \]
+                    </h4>
+                </details>
+            </h4>
+
+            <h1>Footnote</h1>
+            <h4>
+                <ul>
+                    <li>Kelvin never uses the degree symbol (write K not ˚K).</li>
+                    <li>For real-world values, round to sensible precision (e.g., one or two decimals).</li>
+                    <li>Negative temperatures are valid in °C and °F, but not in Kelvin.</li>
+                </ul>
+
+            </h4>
         </div>
     </body>
 </html>
