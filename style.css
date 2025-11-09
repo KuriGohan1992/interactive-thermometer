@@ -6,6 +6,7 @@
 
 h1 {
     font-size: 28px;
+    margin-bottom: 8px;
 }
 
 h3 {
@@ -24,6 +25,10 @@ h5 {
     font-size: 18px;
     font-weight: 200;
     /* font-style: italic; */
+}
+
+ul {
+    margin-top: 8px;
 }
 
 .arith-btn {
@@ -145,6 +150,7 @@ a {
 }
 
 #fun_fact {
+    min-height: 70px;
     width: 360px;
     flex-wrap: wrap;
 }
@@ -187,7 +193,9 @@ a {
 #description-stuff {
     display: flex;
     flex-direction: column;
-    gap: 1.5rem;  /* controls vertical spacing between children */
+    gap: 1rem;
+    position: relative;
+    top: 12px;
 }
 
 /* Chrome, Safari, Edge, Opera */
